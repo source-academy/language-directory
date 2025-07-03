@@ -1,6 +1,7 @@
-import { ILanguage } from "../../types";
+import { ILanguageDefinition } from "../../types";
 
-const pythonLanguage: ILanguage = {
+const pythonLanguage: ILanguageDefinition = {
+    id: "python",
     name: "Python"
 };
 

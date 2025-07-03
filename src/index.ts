@@ -1,8 +1,8 @@
 import { pythonLanguage } from "./languages/python";
 import { sourceLanguage } from "./languages/source";
-import { ILanguage } from "./types";
+import { ILanguageDefinition } from "./types";
 
-const languages: ILanguage[] = [
+const languages: ILanguageDefinition[] = [
     sourceLanguage,
     pythonLanguage
 ];

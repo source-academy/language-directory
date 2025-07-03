@@ -1,10 +1,11 @@
-import { ILanguage } from "../../types";
+import { ILanguageDefinition } from "../../types";
 import { source1Language } from "./source1";
 import { source2Language } from "./source2";
 import { source3Language } from "./source3";
 import { source4Language } from "./source4";
 
-const sourceLanguage: ILanguage = {
+const sourceLanguage: ILanguageDefinition = {
+    id: "source",
     name: "Source",
     variants: [
         source1Language,

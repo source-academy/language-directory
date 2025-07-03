@@ -4,7 +4,7 @@ This repository acts as a directory for languages officially supported by Source
 
 ## Language definitions
 
-Language definitions should follow the `ILanguage` interface.
+Language definitions should follow the `ILanguageDefinition` interface.
 
 Languages consist of a name, an optional array of evaluators capable of running the given language,
 an optional array of language variants (or "sublanguages"), and an optional editor configuration.
@@ -17,6 +17,6 @@ and add the definition to the `languages` array in `src/index.ts`.
 
 ## Evaluator definitions
 
-Evaluator definitions should follow the `IAvailableEvaluator` interface.
+Evaluator definitions should follow the `IEvaluatorDefinition` interface.
 
 Evaluators consist of a name, a URL to the evaluator's entrypoint file, and an array of its capabilities.

@@ -1,6 +1,9 @@
 import { EvaluatorCapability } from "./EvaluatorCapability";
 
-interface IAvailableEvaluator {
+interface IEvaluatorDefinition {
+    /** The evaluator's identifier. */
+    readonly id: string;
+
     /** The name of the evaluator. */
     readonly name: string;
 
@@ -11,4 +14,4 @@ interface IAvailableEvaluator {
     readonly capabilities: EvaluatorCapability[];
 }
 
-export type { IAvailableEvaluator };
+export type { IEvaluatorDefinition };

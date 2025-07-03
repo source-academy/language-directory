@@ -1,6 +1,7 @@
-import { ILanguage } from "../../../types";
+import { ILanguageDefinition } from "../../../types";
 
-const source3Language: ILanguage = {
+const source3Language: ILanguageDefinition = {
+    id: "source3",
     name: "Source 3",
     evaluators: [],
 };
