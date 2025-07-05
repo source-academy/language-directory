@@ -8,10 +8,7 @@ interface ILanguageDefinition {
     readonly name: string;
 
     /** An array of evaluators that can run the language. */
-    readonly evaluators?: IEvaluatorDefinition[];
-
-    /** Variants of the language. */
-    readonly variants?: ILanguageDefinition[];
+    readonly evaluators: IEvaluatorDefinition[];
 
     /** Editor configuration. WIP. */
     readonly editorConfig?: any;

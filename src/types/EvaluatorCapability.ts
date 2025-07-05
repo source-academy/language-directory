@@ -1,4 +1,4 @@
-const enum EvaluatorCapability {
+enum EvaluatorCapability {
 }
 
-export type { EvaluatorCapability };
+export { EvaluatorCapability };
