@@ -1,10 +1,10 @@
 {
   "name": "language-directory",
   "packageManager": "yarn@4.6.0",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A directory for languages supported by Source Academy.",
   "type": "module",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
