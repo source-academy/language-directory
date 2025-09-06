@@ -1,13 +1,14 @@
 {
   "name": "language-directory",
   "packageManager": "yarn@4.6.0",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A directory for languages supported by Source Academy.",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c && node ./scripts/pack.js > dist/directory.json",
-    "start": "rollup -cw & http-server ./dist -p8124 -c-1 &",
+    "build": "rollup -c && yarn make-json",
+    "start": "rollup -cw --watch.onEnd='yarn make-json' & http-server ./dist -p8124 -c-1 --cors &",
+    "make-json": "node ./scripts/make-json.js > dist/directory.json",
     "prepack": "yarn build"
   },
   "repository": {
