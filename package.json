@@ -1,13 +1,13 @@
 {
   "name": "language-directory",
   "packageManager": "yarn@4.6.0",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A directory for languages supported by Source Academy.",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c && node ./scripts/pack.js > dist/directory.json",
+    "start": "rollup -cw & http-server ./dist -p8124 -c-1 &",
     "prepack": "yarn build"
   },
   "repository": {
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
+    "http-server": "^14.1.1",
     "rollup": "^4.34.1",
     "tslib": "^2.8.1",
     "typescript": "^5.5.3"

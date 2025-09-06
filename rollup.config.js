@@ -3,7 +3,7 @@ import typescript from "@rollup/plugin-typescript";
 
 export default {
     plugins: [typescript()],
-    input: "src/index.ts",
+    input: ["src/index.ts", "src/languages.ts", "src/util.ts"],
     output: {
         plugins: [terser()],
         dir: "dist",
