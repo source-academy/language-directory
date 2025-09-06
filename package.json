@@ -1,7 +1,7 @@
 {
   "name": "language-directory",
   "packageManager": "yarn@4.6.0",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A directory for languages supported by Source Academy.",
   "type": "module",
   "main": "dist/index.js",
