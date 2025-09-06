@@ -11,7 +11,7 @@ You may import the `languages` array directly after installing this repository
 to be bundled together at build time.
 
 Caution: when including this repository as a dependency in your `package.json`,
-**be sure to specify the specific commit hash**.
+**be sure to specify a specific commit hash or tag**.
 Failure to do this may cause problems with CI/CD due to lockfile issues when this
 directory is updated.
 
