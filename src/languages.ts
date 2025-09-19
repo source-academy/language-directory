@@ -8,7 +8,7 @@ export const languages: ILanguageDefinition[] = [
     pythonLanguage
 ];
 
-export const languageMap: Map<string, ILanguageDefinition> = generateLanguageMap(languages);
+export const languageMap: Map<string, ILanguageDefinition> = /*#__PURE__*/ generateLanguageMap(languages);
 
 if (languages.length !== languageMap.size) {
     console.warn("Non-unique language ID in language directory");

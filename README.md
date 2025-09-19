@@ -46,5 +46,5 @@ Evaluators consist of an ID, a name, a URL to the evaluator's entrypoint file, a
 You may test any changes (e.g. adding your new language) locally by running `yarn start`.
 This starts a development server and compiles the directory in watch mode (recompiling on any changes).
 
-The directory will be available at [`http://localhost:8124/directory.json`](http://localhost:8124/directory.json).
+The directory will be available at [`http://localhost:8125/directory.json`](http://localhost:8125/directory.json).
 On the Source Academy frontend, set the feature flag `langdir.url` to point to this location.
