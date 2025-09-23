@@ -47,4 +47,5 @@ You may test any changes (e.g. adding your new language) locally by running `yar
 This starts a development server and compiles the directory in watch mode (recompiling on any changes).
 
 The directory will be available at [`http://localhost:8125/directory.json`](http://localhost:8125/directory.json).
-On the Source Academy frontend, set the feature flag `langdir.url` to point to this location.
+On the Source Academy frontend, ensure the feature flag `directory.language.enable` is toggled to `true`, and
+set the flag `directory.language.url` to point to this location.
