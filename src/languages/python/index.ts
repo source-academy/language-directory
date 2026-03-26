@@ -1,9 +1,8 @@
 import { ILanguageDefinition } from "../../types";
+import { pythonSourceLanguage } from "./source";
+import { pythonPyodideLanguage } from "./pyodide";
 
-const pythonLanguage: ILanguageDefinition = {
-    id: "python",
-    name: "Python",
-    evaluators: []
-};
-
-export { pythonLanguage };
+export const pythonLanguage: ILanguageDefinition[] = [
+    pythonSourceLanguage,
+    pythonPyodideLanguage
+];

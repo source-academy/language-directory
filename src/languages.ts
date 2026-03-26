@@ -5,7 +5,7 @@ import { generateLanguageMap } from "./util";
 
 export const languages: ILanguageDefinition[] = [
     ...sourceLanguage,
-    pythonLanguage
+    ...pythonLanguage
 ];
 
 export const languageMap: Map<string, ILanguageDefinition> = /*#__PURE__*/ generateLanguageMap(languages);
