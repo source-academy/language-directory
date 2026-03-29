@@ -1,8 +1,14 @@
 import { ILanguageDefinition } from "../../types";
-import { pythonSourceLanguage } from "./source";
-import { pythonPyodideLanguage } from "./pyodide";
+import { pythonFullLanguage } from "./pythonFull";
+import { python1Language } from "./python1";
+import { python2Language } from "./python2";
+import { python3Language } from "./python3";
+import { python4Language } from "./python4";
 
 export const pythonLanguage: ILanguageDefinition[] = [
-    pythonSourceLanguage,
-    pythonPyodideLanguage
+    pythonFullLanguage,
+    python1Language,
+    python2Language,
+    python3Language,
+    python4Language,
 ];
