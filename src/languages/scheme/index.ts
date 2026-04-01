@@ -3,7 +3,7 @@ import { ILanguageDefinition } from "../../types";
 const schemeEvaluator = {
   id: "schemeDefault",
   name: "Default",
-  path: "http://localhost:8126/scm-slang-evaluator.js",
+  path: "https://source-academy.github.io/scm-slang/scm-slang-evaluator.js",
   capabilities: []
 };
 
