@@ -17,5 +17,8 @@ const python1Pyodide: IEvaluatorDefinition = {
 export const python1Language: ILanguageDefinition = {
     id: "python1",
     name: "Python 1",
-    evaluators: [python1Default, python1Pyodide]
+    evaluators: [
+        python1Default, 
+        python1Pyodide,
+    ],
 };

@@ -17,5 +17,8 @@ const python3Pyodide: IEvaluatorDefinition = {
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python 3",
-    evaluators: [python3Default, python3Pyodide]
+    evaluators: [
+        python3Default, 
+        python3Pyodide,
+    ],
 };
