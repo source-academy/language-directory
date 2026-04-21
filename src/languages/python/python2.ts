@@ -14,11 +14,19 @@ const python2Pyodide: IEvaluatorDefinition = {
     capabilities: []
 };
 
+const python2Wasm: IEvaluatorDefinition = {
+    id: "python2Wasm",
+    name: "WebAssembly",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator2.js",
+    capabilities: []
+};
+
 export const python2Language: ILanguageDefinition = {
     id: "python2",
     name: "Python 2",
     evaluators: [
         python2Default, 
         python2Pyodide,
+        python2Wasm,
     ],
 };
