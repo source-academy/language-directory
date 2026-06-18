@@ -17,6 +17,7 @@ const python4Pyodide: IEvaluatorDefinition = {
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python 4",
+    textbookUrl: "https://sicp.sourceacademy.org/json_py/",
     evaluators: [
         python4Default, 
         python4Pyodide,
