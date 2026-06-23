@@ -17,7 +17,7 @@ const python1Pyodide: IEvaluatorDefinition = {
 const python1Stepper: IEvaluatorDefinition = {
     id: "python1Stepper",
     name: "Stepper",
-    path: "https://source-academy.github.io/py-slang/PythonStepperEvaluator1.js",
+    path: "https://source-academy.github.io/py-slang/PyStepperEvaluator1.js",
     capabilities: []
 };
 
