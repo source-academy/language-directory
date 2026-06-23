@@ -10,7 +10,7 @@ const source3Default: IEvaluatorDefinition = {
 export const source3Language: ILanguageDefinition = {
     id: "source3",
     name: "Source 3",
-    textbookUrl: "https://sicp.sourceacademy.org/json/",
+    textbook: { url: "https://sicp.sourceacademy.org/json/", name: "SICP JS" },
     evaluators: [
         source3Default
     ],
