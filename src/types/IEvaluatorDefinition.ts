@@ -12,6 +12,9 @@ interface IEvaluatorDefinition {
 
     /** An array of this evaluator's capabilities. */
     readonly capabilities: EvaluatorCapability[];
+
+    /** Welcome/introduction text shown in the playground when this evaluator is selected. Supports markdown. */
+    readonly welcome?: string;
 }
 
 export type { IEvaluatorDefinition };
