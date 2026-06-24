@@ -4,7 +4,8 @@ const source2Default: IEvaluatorDefinition = {
     id: "source2Default",
     name: "Default",
     path: "https://source-academy.github.io/js-slang-lean/evaluator2.js",
-    capabilities: []
+    capabilities: [],
+    welcome: `You have chosen the **Default** evaluator for Source §2.`
 };
 
 export const source2Language: ILanguageDefinition = {
@@ -14,4 +15,7 @@ export const source2Language: ILanguageDefinition = {
     evaluators: [
         source2Default
     ],
+    welcome: `Welcome to the Source Academy playground!
+
+The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses JavaScript sublanguages that we call [_Source_](https://docs.sourceacademy.org/). You have chosen **Source §2**, matching SICP JS §2.`
 };

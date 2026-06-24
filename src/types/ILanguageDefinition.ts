@@ -20,6 +20,9 @@ interface ILanguageDefinition {
         /** Display name for the textbook (e.g. "SICPy", "SICP JS"). */
         readonly name: string;
     };
+
+    /** Welcome/introduction text shown in the playground when this language is selected. Supports markdown. */
+    readonly welcome?: string;
 }
 
 export type { ILanguageDefinition };
