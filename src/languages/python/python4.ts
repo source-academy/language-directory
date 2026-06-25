@@ -5,7 +5,8 @@ const python4Default: IEvaluatorDefinition = {
     name: "Default",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator4.js",
     capabilities: [EvaluatorCapability.CSE],
-    welcome: `You have chosen the **Default** evaluator, which runs Python §4 using the CSE machine.`
+    welcome: `You have chosen the **Default** evaluator, which runs Python §4 using the CSE machine.`,
+    defaultProgram: `print("hello world")\n`
 };
 
 const python4Pyodide: IEvaluatorDefinition = {
@@ -13,7 +14,8 @@ const python4Pyodide: IEvaluatorDefinition = {
     name: "Pyodide",
     path: "https://source-academy.github.io/py-slang/pyodide-evaluator-4.js",
     capabilities: [],
-    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §4 using the full CPython runtime via WebAssembly.`
+    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §4 using the full CPython runtime via WebAssembly.`,
+    defaultProgram: `print("hello world")\n`
 };
 
 export const python4Language: ILanguageDefinition = {
