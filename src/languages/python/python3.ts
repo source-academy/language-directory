@@ -1,10 +1,10 @@
-import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
 const python3Default: IEvaluatorDefinition = {
     id: "python3Default",
     name: "Default",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
-    capabilities: [],
+    capabilities: [EvaluatorCapability.CSE],
     welcome: `You have chosen the **Default** evaluator, which runs Python §3 using the CSE machine.`
 };
 
