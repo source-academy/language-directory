@@ -5,7 +5,8 @@ const python3Default: IEvaluatorDefinition = {
     name: "Default",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
     capabilities: [EvaluatorCapability.CSE],
-    welcome: `You have chosen the **Default** evaluator, which runs Python §3 using the CSE machine.`
+    welcome: `You have chosen the **Default** evaluator, which runs Python §3 using the CSE machine.`,
+    defaultProgram: `print("hello world")\n`
 };
 
 const python3Pyodide: IEvaluatorDefinition = {
