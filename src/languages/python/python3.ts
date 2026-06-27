@@ -1,11 +1,12 @@
-import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
 const python3Default: IEvaluatorDefinition = {
     id: "python3Default",
     name: "Default",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
-    capabilities: [],
-    welcome: `You have chosen the **Default** evaluator, which runs Python §3 using the CSE machine.`
+    capabilities: [EvaluatorCapability.CSE],
+    welcome: `You have chosen the **Default** evaluator, which runs Python §3 using the CSE machine.`,
+    defaultProgram: `print("hello world")\n`
 };
 
 const python3Pyodide: IEvaluatorDefinition = {
@@ -13,7 +14,8 @@ const python3Pyodide: IEvaluatorDefinition = {
     name: "Pyodide",
     path: "https://source-academy.github.io/py-slang/pyodide-evaluator-3.js",
     capabilities: [],
-    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §3 using the full CPython runtime via WebAssembly.`
+    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §3 using the full CPython runtime via WebAssembly.`,
+    defaultProgram: `print("hello world")\n`
 };
 
 export const python3Language: ILanguageDefinition = {
