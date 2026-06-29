@@ -16,12 +16,10 @@ const python2Pyodide: IEvaluatorDefinition = {
     welcome: `You have chosen the **Pyodide** evaluator, which runs Python §2 using the full CPython runtime via WebAssembly.`
 };
 
-// The Python stepper is chapter-agnostic (it parses + substitution-steps any Python program, with no
-// chapter restrictions), so every Python chapter shares the single PyStepperEvaluator1 bundle.
 const python2Stepper: IEvaluatorDefinition = {
     id: "python2Stepper",
     name: "Stepper",
-    path: "https://source-academy.github.io/py-slang/PyStepperEvaluator1.js",
+    path: "https://source-academy.github.io/py-slang/PyStepperEvaluator2.js",
     capabilities: []
 };
 
