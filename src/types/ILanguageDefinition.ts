@@ -19,6 +19,8 @@ interface ILanguageDefinition {
         readonly url: string;
         /** Display name for the textbook (e.g. "SICPy", "SICP JS"). */
         readonly name: string;
+        /** URL of the textbook's title/cover image. */
+        readonly titleImageUrl?: string;
     };
 
     /** Welcome/introduction text shown in the playground when this language is selected. Supports markdown. */

@@ -19,7 +19,7 @@ const python1Pyodide: IEvaluatorDefinition = {
 export const python1Language: ILanguageDefinition = {
     id: "python1",
     name: "Python 1",
-    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy" },
+    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
         python1Default,
         python1Pyodide,
