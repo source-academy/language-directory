@@ -11,7 +11,7 @@ const source4Default: IEvaluatorDefinition = {
 export const source4Language: ILanguageDefinition = {
     id: "source4",
     name: "Source §4",
-    textbook: { url: "https://sicp.sourceacademy.org/json/", name: "SICP JS" },
+    textbook: { url: "https://sicp.sourceacademy.org/json/", name: "SICP JS", titleImageUrl: "https://source-academy.github.io/sicp/sicpjs.png" },
     evaluators: [
         source4Default
     ],
