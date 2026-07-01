@@ -16,13 +16,21 @@ const python1Pyodide: IEvaluatorDefinition = {
     welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly.`
 };
 
+const python1Stepper: IEvaluatorDefinition = {
+    id: "python1Stepper",
+    name: "Stepper",
+    path: "https://source-academy.github.io/py-slang/PyStepperEvaluator1.js",
+    capabilities: []
+};
+
 export const python1Language: ILanguageDefinition = {
     id: "python1",
-    name: "Python 1",
+    name: "Python §1",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
         python1Default,
         python1Pyodide,
+        python1Stepper,
     ],
     welcome: `Welcome to the Source Academy playground!
 
