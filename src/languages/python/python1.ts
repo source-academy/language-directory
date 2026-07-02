@@ -1,4 +1,4 @@
-import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
 const python1Default: IEvaluatorDefinition = {
     id: "python1Default",
@@ -20,7 +20,7 @@ const python1Stepper: IEvaluatorDefinition = {
     id: "python1Stepper",
     name: "Stepper",
     path: "https://source-academy.github.io/py-slang/PyStepperEvaluator1.js",
-    capabilities: []
+    capabilities: [EvaluatorCapability.STEPPER]
 };
 
 export const python1Language: ILanguageDefinition = {
