@@ -16,6 +16,14 @@ const python1Pyodide: IEvaluatorDefinition = {
     welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly.`
 };
 
+const python1Pvml: IEvaluatorDefinition = {
+    id: "python1Pvml",
+    name: "PVML",
+    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator1.js",
+    capabilities: [],
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §1 to PVML bytecode and runs it on a pure-TypeScript virtual machine — no native binary and no CPython WebAssembly runtime involved.`
+};
+
 const python1Stepper: IEvaluatorDefinition = {
     id: "python1Stepper",
     name: "Stepper",
@@ -30,6 +38,7 @@ export const python1Language: ILanguageDefinition = {
     evaluators: [
         python1Default,
         python1Pyodide,
+        python1Pvml,
         python1Stepper,
     ],
     welcome: `Welcome to the Source Academy playground!
