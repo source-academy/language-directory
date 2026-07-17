@@ -18,6 +18,15 @@ const python3Pyodide: IEvaluatorDefinition = {
     defaultProgram: `print("hello world")\n`
 };
 
+const python3Pvml: IEvaluatorDefinition = {
+    id: "python3Pvml",
+    name: "PVML",
+    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator3.js",
+    capabilities: [],
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §3 to PVML bytecode and runs it on a pure-TypeScript virtual machine — no native binary and no CPython WebAssembly runtime involved.`,
+    defaultProgram: `print("hello world")\n`
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
@@ -25,6 +34,7 @@ export const python3Language: ILanguageDefinition = {
     evaluators: [
         python3Default,
         python3Pyodide,
+        python3Pvml,
     ],
     welcome: `Welcome to the Source Academy playground!
 
