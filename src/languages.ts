@@ -1,3 +1,4 @@
+import { javaLanguage } from "./languages/java";
 import { pythonLanguage } from "./languages/python";
 import { schemeLanguage } from "./languages/scheme";
 import { sourceLanguage } from "./languages/source";
@@ -7,7 +8,8 @@ import { generateLanguageMap } from "./util";
 export const languages: ILanguageDefinition[] = [
     ...sourceLanguage,
     ...pythonLanguage,
-    schemeLanguage
+    schemeLanguage,
+    javaLanguage
 ];
 
 export const languageMap: Map<string, ILanguageDefinition> = /*#__PURE__*/ generateLanguageMap(languages);
