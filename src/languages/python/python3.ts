@@ -1,11 +1,11 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python3Default: IEvaluatorDefinition = {
-    id: "python3Default",
-    name: "Default",
+const python3Cse: IEvaluatorDefinition = {
+    id: "python3Cse",
+    name: "CSE",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
     capabilities: [EvaluatorCapability.CSE],
-    welcome: `You have chosen the **Default** evaluator, which runs Python §3 using the CSE machine.`,
+    welcome: `You have chosen the **CSE** evaluator, which runs Python §3 using the CSE machine.`,
     defaultProgram: `print("hello world")\n`
 };
 
@@ -50,7 +50,7 @@ export const python3Language: ILanguageDefinition = {
     name: "Python §3",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
-        python3Default,
+        python3Cse,
         python3Pyodide,
         python3Pvml,
         python3Wasm,

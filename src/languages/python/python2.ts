@@ -1,11 +1,11 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python2Default: IEvaluatorDefinition = {
-    id: "python2Default",
-    name: "Default",
+const python2Cse: IEvaluatorDefinition = {
+    id: "python2Cse",
+    name: "CSE",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator2.js",
     capabilities: [],
-    welcome: `You have chosen the **Default** evaluator, which runs Python §2 using the CSE machine.`
+    welcome: `You have chosen the **CSE** evaluator, which runs Python §2 using the CSE machine.`
 };
 
 const python2Pyodide: IEvaluatorDefinition = {
@@ -52,7 +52,7 @@ export const python2Language: ILanguageDefinition = {
     name: "Python §2",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
-        python2Default,
+        python2Cse,
         python2Pyodide,
         python2Pvml,
         python2Wasm,
