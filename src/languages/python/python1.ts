@@ -52,11 +52,11 @@ export const python1Language: ILanguageDefinition = {
     name: "Python §1",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
-        python1Cse,
-        python1Pyodide,
-        python1Pvml,
-        python1Wasm,
         python1Py2js,
+        python1Pvml,
+        python1Cse,
+        python1Wasm,
+        python1Pyodide,
         python1Stepper,
     ],
     welcome: `Welcome to the Source Academy playground!
