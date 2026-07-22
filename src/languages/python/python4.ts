@@ -27,6 +27,24 @@ const python4Pvml: IEvaluatorDefinition = {
     defaultProgram: `print("hello world")\n`
 };
 
+const python4Wasm: IEvaluatorDefinition = {
+    id: "python4Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator4.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §4 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module imports (\`from X import y\`) are not yet supported.`,
+    defaultProgram: `print("hello world")\n`
+};
+
+const python4Py2js: IEvaluatorDefinition = {
+    id: "python4Py2js",
+    name: "Py2JS",
+    path: "https://source-academy.github.io/py-slang/Py2JsEvaluator4.js",
+    capabilities: [],
+    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.`,
+    defaultProgram: `print("hello world")\n`
+};
+
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
@@ -35,6 +53,8 @@ export const python4Language: ILanguageDefinition = {
         python4Default,
         python4Pyodide,
         python4Pvml,
+        python4Wasm,
+        python4Py2js,
     ],
     welcome: `Welcome to the Source Academy playground!
 

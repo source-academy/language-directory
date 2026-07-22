@@ -24,6 +24,22 @@ const python2Pvml: IEvaluatorDefinition = {
     welcome: `You have chosen the **PVML** evaluator, which compiles Python §2 to PVML bytecode and runs it on a pure-TypeScript virtual machine — no native binary and no CPython WebAssembly runtime involved.`
 };
 
+const python2Wasm: IEvaluatorDefinition = {
+    id: "python2Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator2.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §2 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module imports (\`from X import y\`) are not yet supported.`
+};
+
+const python2Py2js: IEvaluatorDefinition = {
+    id: "python2Py2js",
+    name: "Py2JS",
+    path: "https://source-academy.github.io/py-slang/Py2JsEvaluator2.js",
+    capabilities: [],
+    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §2 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.`
+};
+
 const python2Stepper: IEvaluatorDefinition = {
     id: "python2Stepper",
     name: "Stepper",
@@ -39,6 +55,8 @@ export const python2Language: ILanguageDefinition = {
         python2Default,
         python2Pyodide,
         python2Pvml,
+        python2Wasm,
+        python2Py2js,
         python2Stepper,
     ],
     welcome: `Welcome to the Source Academy playground!

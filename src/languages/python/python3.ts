@@ -27,6 +27,24 @@ const python3Pvml: IEvaluatorDefinition = {
     defaultProgram: `print("hello world")\n`
 };
 
+const python3Wasm: IEvaluatorDefinition = {
+    id: "python3Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator3.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §3 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module imports (\`from X import y\`) are not yet supported.`,
+    defaultProgram: `print("hello world")\n`
+};
+
+const python3Py2js: IEvaluatorDefinition = {
+    id: "python3Py2js",
+    name: "Py2JS",
+    path: "https://source-academy.github.io/py-slang/Py2JsEvaluator3.js",
+    capabilities: [],
+    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.`,
+    defaultProgram: `print("hello world")\n`
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
@@ -35,6 +53,8 @@ export const python3Language: ILanguageDefinition = {
         python3Default,
         python3Pyodide,
         python3Pvml,
+        python3Wasm,
+        python3Py2js,
     ],
     welcome: `Welcome to the Source Academy playground!
 
