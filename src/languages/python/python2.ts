@@ -11,9 +11,9 @@ const python2Default: IEvaluatorDefinition = {
 const python2Pyodide: IEvaluatorDefinition = {
     id: "python2Pyodide",
     name: "Pyodide",
-    path: "https://source-academy.github.io/py-slang/pyodide-evaluator-2.js",
+    path: "https://source-academy.github.io/py-slang/PyodideEvaluator2.js",
     capabilities: [],
-    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §2 using the full CPython runtime via WebAssembly.`
+    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §2 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI.`
 };
 
 const python2Pvml: IEvaluatorDefinition = {
@@ -29,7 +29,7 @@ const python2Wasm: IEvaluatorDefinition = {
     name: "WASM",
     path: "https://source-academy.github.io/py-slang/PyWasmEvaluator2.js",
     capabilities: [],
-    welcome: `You have chosen the **WASM** evaluator, which compiles Python §2 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module imports (\`from X import y\`) are not yet supported.`
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §2 directly to a WebAssembly module and runs it natively in the browser.`
 };
 
 const python2Py2js: IEvaluatorDefinition = {
