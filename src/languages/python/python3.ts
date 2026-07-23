@@ -45,6 +45,15 @@ const python3Py2js: IEvaluatorDefinition = {
     defaultProgram: `print("hello world")\n`
 };
 
+const python3Pynter: IEvaluatorDefinition = {
+    id: "python3Pynter",
+    name: "Pynter",
+    path: "https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js",
+    capabilities: [EvaluatorCapability.CSE],
+    welcome: `You have chosen the **Pynter** evaluator, which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy's native C bytecode VM, compiled to WebAssembly — no CPython runtime, no TypeScript interpreter loop. **Experimental**: Pynter targets 32-bit embedded hardware, so numbers have limited range and precision — integers are ~21-bit (roughly ±2^20) and floats are single-precision (32-bit), not Python's usual arbitrary-precision ints or 64-bit doubles.`,
+    defaultProgram: `print("hello world")\n`
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
@@ -55,6 +64,7 @@ export const python3Language: ILanguageDefinition = {
         python3Cse,
         python3Wasm,
         python3Pyodide,
+        python3Pynter,
     ],
     welcome: `Welcome to the Source Academy playground!
 
