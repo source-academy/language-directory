@@ -1,19 +1,19 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python1Default: IEvaluatorDefinition = {
-    id: "python1Default",
-    name: "Default",
+const python1Cse: IEvaluatorDefinition = {
+    id: "python1Cse",
+    name: "CSE",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **Default** evaluator, which runs Python §1 using the CSE machine.`
+    welcome: `You have chosen the **CSE** evaluator, which runs Python §1 using the CSE machine.`
 };
 
 const python1Pyodide: IEvaluatorDefinition = {
     id: "python1Pyodide",
     name: "Pyodide",
-    path: "https://source-academy.github.io/py-slang/pyodide-evaluator-1.js",
+    path: "https://source-academy.github.io/py-slang/PyodideEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly.`
+    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI.`
 };
 
 const python1Pvml: IEvaluatorDefinition = {
@@ -29,7 +29,7 @@ const python1Wasm: IEvaluatorDefinition = {
     name: "WASM",
     path: "https://source-academy.github.io/py-slang/PyWasmEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **WASM** evaluator, which compiles Python §1 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module imports (\`from X import y\`) are not yet supported.`
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §1 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module calls rely on WebAssembly's JS Promise Integration (JSPI), currently supported in Chrome-based browsers only.`
 };
 
 const python1Py2js: IEvaluatorDefinition = {
@@ -52,11 +52,11 @@ export const python1Language: ILanguageDefinition = {
     name: "Python §1",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
-        python1Default,
-        python1Pyodide,
-        python1Pvml,
-        python1Wasm,
         python1Py2js,
+        python1Pvml,
+        python1Cse,
+        python1Wasm,
+        python1Pyodide,
         python1Stepper,
     ],
     welcome: `Welcome to the Source Academy playground!
