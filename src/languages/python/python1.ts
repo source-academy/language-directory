@@ -5,7 +5,7 @@ const python1Cse: IEvaluatorDefinition = {
     name: "CSE",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **CSE** evaluator, which runs Python §1 using the CSE machine.`
+    welcome: `You have chosen the **CSE** evaluator, which runs Python §1 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
 const python1Pyodide: IEvaluatorDefinition = {
@@ -13,7 +13,7 @@ const python1Pyodide: IEvaluatorDefinition = {
     name: "Pyodide",
     path: "https://source-academy.github.io/py-slang/PyodideEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI.`
+    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI. Interactive features such as \`input\` and \`set_timeout\` are not available.`
 };
 
 const python1Pvml: IEvaluatorDefinition = {
@@ -21,7 +21,7 @@ const python1Pvml: IEvaluatorDefinition = {
     name: "PVML",
     path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **PVML** evaluator, which compiles Python §1 to PVML bytecode and runs it on a pure-TypeScript virtual machine — no native binary and no CPython WebAssembly runtime involved.`
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §1 to PVML bytecode and runs it on a pure-TypeScript virtual machine — no native binary and no CPython WebAssembly runtime involved.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
 const python1Wasm: IEvaluatorDefinition = {
@@ -29,7 +29,7 @@ const python1Wasm: IEvaluatorDefinition = {
     name: "WASM",
     path: "https://source-academy.github.io/py-slang/PyWasmEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **WASM** evaluator, which compiles Python §1 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module calls rely on WebAssembly's JS Promise Integration (JSPI), currently supported in Chrome-based browsers only.`
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §1 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module calls rely on WebAssembly's JS Promise Integration (JSPI), currently supported in Chrome-based browsers only.\n\nIn Chrome, this evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
 const python1Py2js: IEvaluatorDefinition = {
@@ -37,7 +37,7 @@ const python1Py2js: IEvaluatorDefinition = {
     name: "Py2JS",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §1 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.`
+    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §1 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
 const python1Stepper: IEvaluatorDefinition = {
@@ -61,5 +61,5 @@ export const python1Language: ILanguageDefinition = {
     ],
     welcome: `Welcome to the Source Academy playground!
 
-The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen **Python §1**, matching SICPy §1.`
+The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §1**](https://docs.sourceacademy.org/python/python_1/), matching [**SICPy §1**](https://sourceacademy.org/sicpy/1).`
 };

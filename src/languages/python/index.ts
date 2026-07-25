@@ -6,9 +6,9 @@ import { python3Language } from "./python3";
 import { python4Language } from "./python4";
 
 export const pythonLanguage: ILanguageDefinition[] = [
-    pythonFullLanguage,
     python1Language,
     python2Language,
     python3Language,
     python4Language,
+    pythonFullLanguage,
 ];
