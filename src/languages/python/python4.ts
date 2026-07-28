@@ -11,7 +11,7 @@ const python4Cse: IEvaluatorDefinition = {
 
 const python4Pyodide: IEvaluatorDefinition = {
     id: "python4Pyodide",
-    name: "Pyodide",
+    name: "CPython",
     path: "https://source-academy.github.io/py-slang/PyodideEvaluator4.js",
     capabilities: [],
     welcome: `You have chosen the **Pyodide** evaluator, which runs Python §4 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI. Interactive features such as \`input\` and \`set_timeout\` are not available.`,

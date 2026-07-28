@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python1Pyodide: IEvaluatorDefinition = {
     id: "python1Pyodide",
-    name: "Pyodide",
+    name: "CPython",
     path: "https://source-academy.github.io/py-slang/PyodideEvaluator1.js",
     capabilities: [],
     welcome: `You have chosen the **Pyodide** evaluator, which runs Python §1 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI. Interactive features such as \`input\` and \`set_timeout\` are not available.`
