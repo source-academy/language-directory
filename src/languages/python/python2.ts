@@ -1,13 +1,5 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python2Cse: IEvaluatorDefinition = {
-    id: "python2Cse",
-    name: "CSE",
-    path: "https://source-academy.github.io/py-slang/PyCseEvaluator2.js",
-    capabilities: [],
-    welcome: `You have chosen the **CSE** evaluator, which runs Python §2 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
-};
-
 const python2Pyodide: IEvaluatorDefinition = {
     id: "python2Pyodide",
     name: "Pyodide",
@@ -54,7 +46,6 @@ export const python2Language: ILanguageDefinition = {
     evaluators: [
         python2Py2js,
         python2Pvml,
-        python2Cse,
         python2Wasm,
         python2Pyodide,
         python2Stepper,
