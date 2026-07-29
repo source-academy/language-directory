@@ -1,32 +1,8 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python2Pyodide: IEvaluatorDefinition = {
-    id: "python2Pyodide",
-    name: "CPython",
-    path: "https://source-academy.github.io/py-slang/PyodideEvaluator2.js",
-    capabilities: [],
-    welcome: `You have chosen the **Pyodide** evaluator, which runs Python §2 using the full CPython runtime via WebAssembly. **Experimental**: Source Academy's own modules (e.g. Runes) are not supported — only packages installable from PyPI. Interactive features such as \`input\` and \`set_timeout\` are not available.`
-};
-
-const python2Pvml: IEvaluatorDefinition = {
-    id: "python2Pvml",
-    name: "PVML",
-    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator2.js",
-    capabilities: [],
-    welcome: `You have chosen the **PVML** evaluator, which compiles Python §2 to PVML bytecode and runs it on a pure-TypeScript virtual machine — no native binary and no CPython WebAssembly runtime involved.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
-};
-
-const python2Wasm: IEvaluatorDefinition = {
-    id: "python2Wasm",
-    name: "WASM",
-    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator2.js",
-    capabilities: [],
-    welcome: `You have chosen the **WASM** evaluator, which compiles Python §2 directly to a WebAssembly module and runs it natively in the browser. **Experimental**: module calls rely on WebAssembly's JS Promise Integration (JSPI), currently supported in Chrome-based browsers only.\n\nIn Chrome, this evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
-};
-
 const python2Py2js: IEvaluatorDefinition = {
     id: "python2Py2js",
-    name: "Py2JS",
+    name: "Python §2",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator2.js",
     capabilities: [],
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §2 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
@@ -34,7 +10,7 @@ const python2Py2js: IEvaluatorDefinition = {
 
 const python2Stepper: IEvaluatorDefinition = {
     id: "python2Stepper",
-    name: "Stepper",
+    name: "Python §2",
     path: "https://source-academy.github.io/py-slang/PyStepperEvaluator2.js",
     capabilities: [EvaluatorCapability.STEPPER]
 };
@@ -45,9 +21,6 @@ export const python2Language: ILanguageDefinition = {
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
         python2Py2js,
-        python2Pvml,
-        python2Wasm,
-        python2Pyodide,
         python2Stepper,
     ],
     welcome: `Welcome to the Source Academy playground!
