@@ -11,6 +11,7 @@ interface ILanguageDefinition {
     readonly evaluators: IEvaluatorDefinition[];
 
     /** Editor configuration. WIP. */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     readonly editorConfig?: any;
 
     /** Textbook configuration for this language. */
