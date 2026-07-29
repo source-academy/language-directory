@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python4Cse: IEvaluatorDefinition = {
     id: "python4Cse",
-    name: "CSE",
+    name: "Python §4",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator4.js",
     capabilities: [EvaluatorCapability.CSE],
     welcome: `You have chosen the **CSE** evaluator, which runs Python §4 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`,
@@ -10,8 +10,8 @@ const python4Cse: IEvaluatorDefinition = {
 };
 
 const python4Py2js: IEvaluatorDefinition = {
-    id: "Python §4",
-    name: "Py2JS",
+    id: "python4Py2js",
+    name: "Python §4",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator4.js",
     capabilities: [],
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`,

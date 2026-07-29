@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python3Cse: IEvaluatorDefinition = {
     id: "python3Cse",
-    name: "CSE",
+    name: "Python §3",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
     capabilities: [EvaluatorCapability.CSE],
     welcome: `You have chosen the **CSE** evaluator, which runs Python §3 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`,
