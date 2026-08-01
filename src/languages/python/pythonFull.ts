@@ -14,4 +14,5 @@ export const pythonFullLanguage: ILanguageDefinition = {
     evaluators: [
         pythonFullPyodide
     ],
+    defaultFileExtension: "py",
 };
