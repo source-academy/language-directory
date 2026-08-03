@@ -14,7 +14,6 @@
     "vite": "^8.2.0"
   },
   "dependencies": {
-    "@base-ui/react": "^1.6.0",
     "@blueprintjs/core": "^6.18.0",
     "@blueprintjs/select": "^6.3.4",
     "@monaco-editor/react": "^4.7.0",
