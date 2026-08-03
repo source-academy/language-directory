@@ -1,4 +1,4 @@
-import { ILanguageDefinition } from "../../types";
+import type { ILanguageDefinition } from "../../types";
 import { source1Language } from "./source1";
 import { source2Language } from "./source2";
 import { source3Language } from "./source3";

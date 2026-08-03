@@ -1,4 +1,5 @@
-import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, type IEvaluatorDefinition, type ILanguageDefinition } from "../../types";
+import { pythonBaseMonarch } from "./monarch";
 
 const python2Py2js: IEvaluatorDefinition = {
     id: "python2Py2js",
@@ -23,6 +24,7 @@ export const python2Language: ILanguageDefinition = {
         python2Py2js,
         python2Stepper,
     ],
+    monarchGrammar: pythonBaseMonarch,
     welcome: `Welcome to the Source Academy playground!
 
 The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §2**](https://docs.sourceacademy.org/python/python_2/), matching [**SICPy §2**](https://sourceacademy.org/sicpy/2).`

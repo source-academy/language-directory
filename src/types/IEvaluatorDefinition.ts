@@ -1,6 +1,6 @@
-import { EvaluatorCapability } from "./EvaluatorCapability";
+import type { EvaluatorCapability } from "./EvaluatorCapability";
 
-interface IEvaluatorDefinition {
+export interface IEvaluatorDefinition {
     /** The evaluator's identifier. */
     readonly id: string;
 
@@ -19,5 +19,3 @@ interface IEvaluatorDefinition {
     /** Default program shown in the editor when this evaluator is first selected. */
     readonly defaultProgram?: string;
 }
-
-export type { IEvaluatorDefinition };

@@ -1,4 +1,4 @@
-import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import type { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
 const source4Default: IEvaluatorDefinition = {
     id: "source4Default",

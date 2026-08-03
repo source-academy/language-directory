@@ -1,4 +1,4 @@
-import { ILanguageDefinition } from "../../types";
+import type { ILanguageDefinition } from "../../types";
 import { pythonFullLanguage } from "./pythonFull";
 import { python1Language } from "./python1";
 import { python2Language } from "./python2";

@@ -1,4 +1,5 @@
-import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, type IEvaluatorDefinition, type ILanguageDefinition } from "../../types";
+import { pythonExtendedMonarch } from "./monarch";
 
 const python4Cse: IEvaluatorDefinition = {
     id: "python4Cse",
@@ -26,6 +27,7 @@ export const python4Language: ILanguageDefinition = {
         python4Py2js,
         python4Cse,
     ],
+    monarchGrammar: pythonExtendedMonarch,
     welcome: `Welcome to the Source Academy playground!
 
 The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §4**](https://docs.sourceacademy.org/python/python_4/), matching [**SICPy §4**](https://sourceacademy.org/sicpy/4).`

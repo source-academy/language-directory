@@ -1,4 +1,4 @@
-import { ILanguageDefinition } from "../../types";
+import type { ILanguageDefinition } from "../../types";
 
 const javaLanguage: ILanguageDefinition = {
     id: "java",

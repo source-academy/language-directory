@@ -1,4 +1,4 @@
-import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import type { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
 const pythonFullPyodide: IEvaluatorDefinition = {
     id: "pythonFullPyodide",
@@ -14,4 +14,5 @@ export const pythonFullLanguage: ILanguageDefinition = {
     evaluators: [
         pythonFullPyodide
     ],
+    monarchGrammar: 'python'
 };
