@@ -1,9 +1,8 @@
-import type { ILanguageDefinition } from "../../types";
+import type { ILanguageDefinition } from '../../types';
 
-const javaLanguage: ILanguageDefinition = {
-    id: "java",
-    name: "Java",
-    evaluators: []
-};
-
-export { javaLanguage };
+export const javaLanguage = {
+  id: 'java',
+  name: 'Java',
+  evaluators: [],
+  monarchGrammar: 'java'
+} satisfies ILanguageDefinition;
