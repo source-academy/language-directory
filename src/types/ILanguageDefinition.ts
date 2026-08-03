@@ -32,6 +32,12 @@ export interface ILanguageDefinition {
     /** Welcome/introduction text shown in the playground when this language is selected. Supports markdown. */
     readonly welcome?: string;
 
+    /** Whether the Playground's multi-file "folder" mode is available for this language. Defaults to `true` when omitted; set `false` for a language/chapter whose evaluator(s) don't support local-file imports (e.g. Python §1, which has no pair/list library to build the exports-transfer structure folder imports rely on). */
+    readonly foldersEnabled?: boolean;
+
+    /** File extension (without the leading dot) this language's files use — what the Playground names its default single-file entrypoint tab/file (e.g. "program.py") when none exists yet, and what a newly-created file in folder mode should default to. Defaults to `"js"` when omitted, matching every language predating this field. */
+    readonly defaultFileExtension?: string;
+
     /**
      * [Monarch](https://microsoft.github.io/monaco-editor/monarch.html) is the language definition system that the
      * Monaco Editor uses.\

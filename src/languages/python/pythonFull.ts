@@ -14,5 +14,6 @@ export const pythonFullLanguage: ILanguageDefinition = {
     evaluators: [
         pythonFullPyodide
     ],
-    monarchGrammar: 'python'
+    monarchGrammar: 'python',
+    defaultFileExtension: "py",
 };
