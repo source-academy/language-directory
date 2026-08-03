@@ -1,4 +1,4 @@
-import { Button, Card, CardList, Checkbox, EditableText, OverlayToaster, type ToastProps } from "@blueprintjs/core";
+import { Button, Card, CardList, Checkbox, EditableText, OverlayToaster, Tooltip, type ToastProps } from "@blueprintjs/core";
 import type * as monaco from 'monaco-editor';
 import { useRef, useState } from "react";
 
@@ -10,22 +10,27 @@ interface ColourValueFieldProps {
 function ColourValueField({ value, onChange }: ColourValueFieldProps) {
   const [text, setText] = useState<string | null>(null);
 
-  return <EditableText
-    value={text ?? value}
-    onChange={newValue => {
-      if (newValue.length <= 6) {
-        setText(newValue);
-      }
-    }}
-    onConfirm={newValue => {
-      newValue = newValue.toUpperCase();
+  return <Tooltip
+    content='Hex Colour Value'
+    placement='top'
+  >
+    <EditableText
+      value={text ?? value}
+      onChange={newValue => {
+        if (newValue.length <= 6) {
+          setText(newValue);
+        }
+      }}
+      onConfirm={newValue => {
+        newValue = newValue.toUpperCase();
 
-      if (/[0-9A-F]{6}/.test(newValue)) {
-        onChange?.(newValue);
-      }
-      setText(null);
-    }}
-  />
+        if (/[0-9A-F]{6}/.test(newValue)) {
+          onChange?.(newValue);
+        }
+        setText(null);
+      }}
+    />
+  </Tooltip>
 }
 
 interface AddFieldFormProps {
@@ -103,18 +108,25 @@ function TokenCard(props: TokenCard) {
         alignItems: 'center',
         // border: '1px solid red'
       }}>
-        <Checkbox
-          checked={!props.isDisabled || props.isDefault}
-          disabled={props.isDefault}
-          onClick={() => {
-            props.onDisabledChanged?.();
-          }}
-        />
-        <EditableText
-          value={props.isDefault ? 'Default' : props.tokenName}
-          disabled={props.isDefault}
-          onConfirm={props.onTokenNameChanged}
-        />
+        <Tooltip
+          content={props.isDisabled ? 'Re-enable rule' : `Temporarily disable rule`}
+        >
+          <Checkbox
+            checked={!props.isDisabled || props.isDefault}
+            disabled={props.isDefault}
+            onClick={props.onDisabledChanged}
+          />
+        </Tooltip>
+        <Tooltip
+          content="Token Name"
+          placement="top"
+        >
+          <EditableText
+            value={props.isDefault ? 'Default' : props.tokenName}
+            disabled={props.isDefault}
+            onConfirm={props.onTokenNameChanged}
+          />
+        </Tooltip>
         <div style={{
           paddingTop: '5px',
           paddingLeft: '5px',
@@ -123,10 +135,15 @@ function TokenCard(props: TokenCard) {
           <div style={{
             display: hover && !props.isDefault ? undefined : 'none',
           }}>
-            <Button
-              icon='trash'
-              onClick={props.onRemove}
-            />
+            <Tooltip
+              content={<p>Remove Rule for <code>{props.tokenName}</code></p>}
+              placement='top'
+            >
+              <Button
+                icon='trash'
+                onClick={props.onRemove}
+                />
+              </Tooltip>
             </div>
         </div>
       </div>
@@ -146,7 +163,6 @@ interface ThemeConfigProps {
 export default function ThemeConfig({ rules, onUpdate }: ThemeConfigProps) {
   const [, setRerender] = useState(0);
   const rerender = () => setRerender(x => x + 1);
-
 
   const disabledTokensSet = useRef<Set<string>>(new Set());
   const toaster = useRef<OverlayToaster>(null);
@@ -196,6 +212,7 @@ export default function ThemeConfig({ rules, onUpdate }: ThemeConfigProps) {
             updateTheme();
           }}
           onRemove={() => {
+            disabledTokensSet.current.delete(rule.token);
             rules.splice(idx, 1);
             updateTheme();
           }}
