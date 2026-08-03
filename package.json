@@ -1,46 +1,20 @@
 {
-  "name": "language-directory",
-  "packageManager": "yarn@4.6.0",
-  "version": "0.0.21",
-  "description": "A directory for languages supported by Source Academy.",
+  "name": "@source-academy/language-directory-workspace",
+  "private": true,
   "type": "module",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "rollup -c && yarn make-json",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src",
-    "start": "rollup -cw --watch.onEnd='yarn make-json' & http-server ./dist -p8125 -c-1 --cors &",
-    "make-json": "node ./scripts/make-json.js > dist/directory.json",
-    "prepack": "yarn build",
-    "prepare": "husky",
-    "test": "vitest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/source-academy/language-directory.git"
-  },
-  "author": "tsammeow",
-  "license": "ISC",
-  "files": [
-    "dist"
+  "workspaces": [
+    "language-dir",
+    "tester"
   ],
-  "bugs": {
-    "url": "https://github.com/source-academy/language-directory/issues"
+  "scripts": {
+    "lint": "eslint language-dir tester"
   },
-  "homepage": "https://github.com/source-academy/language-directory#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.2",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@vitest/eslint-plugin": "^1.6.26",
     "eslint": "^10.8.0",
-    "http-server": "^14.1.1",
-    "husky": "^9.1.7",
-    "rollup": "^4.59.0",
-    "tslib": "^2.8.1",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.65.0",
-    "vitest": "^4.1.10"
-  }
+    "typescript-eslint": "^8.65.0"
+  },
+  "packageManager": "yarn@4.13.0"
 }
