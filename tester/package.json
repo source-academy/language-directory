@@ -1,0 +1,26 @@
+{
+  "name": "@source-academy/language-directory-tester",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "typescript": "catalog:",
+    "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.6.0",
+    "@blueprintjs/core": "^6.18.0",
+    "@blueprintjs/select": "^6.3.4",
+    "@monaco-editor/react": "^4.7.0",
+    "@sourceacademy/language-directory": "workspace:^",
+    "monaco-editor": "^0.56.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
