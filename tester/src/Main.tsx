@@ -1,13 +1,13 @@
-import "@blueprintjs/core/lib/css/blueprint.css";
+import '@blueprintjs/core/lib/css/blueprint.css';
 import * as monaco from 'monaco-editor';
 import { Button, Menu, MenuItem, Navbar } from '@blueprintjs/core';
 import { Select } from '@blueprintjs/select';
-import Editor from "./Editor/Editor";
+import Editor from './Editor/Editor';
 import { generateLanguageMap, getLanguageDefinition, languages } from '@sourceacademy/language-directory';
 import { useState } from 'react';
 import ThemeConfig from './ThemeConfig';
-import { sourceTheme } from "./Editor/sourceTheme";
-import { SOURCE_MONACO_THEME } from "./Editor/setupMonaco";
+import { sourceTheme } from './Editor/sourceTheme';
+import { SOURCE_MONACO_THEME } from './Editor/setupMonaco';
 
 const languageMap = generateLanguageMap(languages);
 
@@ -87,8 +87,8 @@ export default function Main() {
             monaco.editor.defineTheme(SOURCE_MONACO_THEME, {
               ...sourceTheme,
               rules: newRules
-            })
-            monaco.editor.setTheme(SOURCE_MONACO_THEME)
+            });
+            monaco.editor.setTheme(SOURCE_MONACO_THEME);
           }}
         />
       </div>

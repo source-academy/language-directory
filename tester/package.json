@@ -1,5 +1,5 @@
 {
-  "name": "@source-academy/language-directory-tester",
+  "name": "@sourceacademy/language-directory-tester",
   "private": true,
   "type": "module",
   "scripts": {

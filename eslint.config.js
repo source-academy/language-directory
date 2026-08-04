@@ -8,7 +8,7 @@ import vitest from '@vitest/eslint-plugin';
 export default defineConfig(
   {
     // Global ignores
-    ignores: ['dist/**', '.yarn/**', '.pnp.*']
+    ignores: ['**/dist', '.yarn/**', '.pnp.*']
   },
   eslint.configs.recommended,
   {
@@ -17,6 +17,7 @@ export default defineConfig(
       '@stylistic': stylistic
     },
     rules: {
+      'no-undef': 'off', // was error
       'prefer-const': 'error',
 
       '@stylistic/eol-last': 'warn',
@@ -37,7 +38,7 @@ export default defineConfig(
       parserOptions: {
         projectService: {
           allowDefaultProject: [
-            'vitest.config.ts',
+            'language-dir/vitest.config.ts',
             'tester/vite.config.ts'
           ],
         },

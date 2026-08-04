@@ -16,7 +16,7 @@ const Editor = forwardRef<monaco.editor.IStandaloneCodeEditor, EditorProps>((pro
     language={props.language}
     theme={SOURCE_MONACO_THEME}
     options={{
-      fontFamily: "'Inconsolata', 'Consolas', monospace",
+      fontFamily: '\'Inconsolata\', \'Consolas\', monospace',
       fontSize: 17,
       minimap: {
         enabled: false

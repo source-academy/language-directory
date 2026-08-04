@@ -49,19 +49,19 @@ const baseMonarch = {
     'or',
     'return',
   ],
-  
-  operators: [
-		'+', '-', '//', '/', '*', '**',
-		'>', '<', '>=', '<=',
-		'==', '!=',
-	],
 
-	illegalOperators: [
-		'+=', '-=', '/=', '//=', '*=', '**=',
+  operators: [
+    '+', '-', '//', '/', '*', '**',
+    '>', '<', '>=', '<=',
+    '==', '!=',
+  ],
+
+  illegalOperators: [
+    '+=', '-=', '/=', '//=', '*=', '**=',
     '|', '|=',
     '&', '&=',
     '^', '^=',
-	],
+  ],
 
   brackets: [
     { open: '{', close: '}', token: 'delimiter.curly' },
@@ -69,7 +69,7 @@ const baseMonarch = {
     { open: '(', close: ')', token: 'delimiter.parenthesis' }
   ],
 
-  symbols: /[<>=\/\-+*%^|&!]{1,3}/,
+  symbols: /[<>=/\-+*%^|&!]{1,3}/,
 
   tokenizer: {
     root: [

@@ -1,6 +1,6 @@
-import { Button, Card, CardList, Checkbox, EditableText, OverlayToaster, Tooltip, type ToastProps } from "@blueprintjs/core";
+import { Button, Card, CardList, Checkbox, EditableText, OverlayToaster, Tooltip, type ToastProps } from '@blueprintjs/core';
 import type * as monaco from 'monaco-editor';
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
 interface ColourValueFieldProps {
   value: string;
@@ -30,7 +30,7 @@ function ColourValueField({ value, onChange }: ColourValueFieldProps) {
         setText(null);
       }}
     />
-  </Tooltip>
+  </Tooltip>;
 }
 
 interface AddFieldFormProps {
@@ -76,7 +76,7 @@ function AddFieldForm({ onAdd }: AddFieldFormProps) {
         </Button>
       </div>
     </div>
-  </Card>
+  </Card>;
 }
 
 interface TokenCard {
@@ -84,7 +84,7 @@ interface TokenCard {
 
   isDisabled?: boolean;
   onDisabledChanged?: () => void;
-  
+
   tokenName: string;
   onTokenNameChanged?: (newName: string) => void;
 
@@ -109,7 +109,7 @@ function TokenCard(props: TokenCard) {
         // border: '1px solid red'
       }}>
         <Tooltip
-          content={props.isDisabled ? 'Re-enable rule' : `Temporarily disable rule`}
+          content={props.isDisabled ? 'Re-enable rule' : 'Temporarily disable rule'}
         >
           <Checkbox
             checked={!props.isDisabled || props.isDefault}
@@ -142,9 +142,9 @@ function TokenCard(props: TokenCard) {
               <Button
                 icon='trash'
                 onClick={props.onRemove}
-                />
-              </Tooltip>
-            </div>
+              />
+            </Tooltip>
+          </div>
         </div>
       </div>
       <ColourValueField
@@ -152,7 +152,7 @@ function TokenCard(props: TokenCard) {
         onChange={props.onColourValueChanged}
       />
     </div>
-  </Card>
+  </Card>;
 }
 
 interface ThemeConfigProps {
@@ -170,7 +170,7 @@ export default function ThemeConfig({ rules, onUpdate }: ThemeConfigProps) {
   const updateTheme = () => {
     rerender();
     onUpdate?.(rules.filter(({ token }) => !disabledTokensSet.current.has(token)));
-  }
+  };
 
   const showToast = (props: ToastProps) => {
     if (toaster.current) {
@@ -204,9 +204,9 @@ export default function ThemeConfig({ rules, onUpdate }: ThemeConfigProps) {
           isDisabled={disabledTokensSet.current.has(rule.token)}
           onDisabledChanged={() => {
             if (disabledTokensSet.current.has(rule.token)) {
-              disabledTokensSet.current.delete(rule.token)
+              disabledTokensSet.current.delete(rule.token);
             } else {
-              disabledTokensSet.current.add(rule.token)
+              disabledTokensSet.current.add(rule.token);
             }
 
             updateTheme();
@@ -232,5 +232,5 @@ export default function ThemeConfig({ rules, onUpdate }: ThemeConfigProps) {
         }}
       />
     </CardList>
-  </div>
+  </div>;
 }

@@ -25,11 +25,11 @@ export const sourceTheme: monaco.editor.IStandaloneThemeData = {
     { token: 'comment', foreground: '0088FF', fontStyle: 'italic' },
     { token: 'constant', foreground: 'FF628C' },
     { token: 'keyword', foreground: 'FF9D00' },
+    { token: 'keyword.illegal', foreground: 'FF0000' },
     { token: 'number', foreground: 'FF628C' },
     { token: 'string', foreground: 'FF628C' },
     { token: 'type', foreground: 'FFEE80' },
     { token: 'variable', foreground: 'CCCCCC' },
-    { token: 'keyword.illegal', foreground: 'FF0000' }
   ],
   colors: {
     'editor.background': aceSourceColors.editorBackground,
