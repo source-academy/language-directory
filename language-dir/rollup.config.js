@@ -5,8 +5,12 @@ import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
 export default defineConfig({
-  plugins: [typescript()],
-  input: ['src/index.ts', 'src/languages.ts', 'src/util.ts'],
+  plugins: [
+    typescript({
+      exclude: ['**/__tests__/**']
+    })
+  ],
+  input: 'src/index.ts',
   output: {
     plugins: [terser()],
     dir: 'dist',
