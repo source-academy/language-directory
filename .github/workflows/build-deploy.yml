@@ -26,16 +26,16 @@ jobs:
         run: yarn install --immutable
 
       - name: yarn test
-        run: yarn test
+        run: yarn workspaces foreach -A --include @sourceacademy/language-directory run test
 
       - name: yarn build
-        run: yarn build
+        run: yarn workspaces foreach -A --include @sourceacademy/language-directory run build
 
       - name: Upload artifacts
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/
+          path: language-dir/dist/
 
   deploy:
     needs: build

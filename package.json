@@ -1,5 +1,5 @@
 {
-  "name": "@source-academy/language-directory-workspace",
+  "name": "@sourceacademy/language-directory-workspace",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -7,13 +7,17 @@
     "tester"
   ],
   "scripts": {
-    "lint": "eslint language-dir tester"
+    "lint": "eslint language-dir tester",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^26.1.2",
     "@vitest/eslint-plugin": "^1.6.26",
     "eslint": "^10.8.0",
+    "husky": "^9.1.7",
+    "typescript": "catalog:",
     "typescript-eslint": "^8.65.0"
   },
   "packageManager": "yarn@4.13.0"

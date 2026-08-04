@@ -725,9 +725,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@source-academy/language-directory-tester@workspace:tester":
+"@sourceacademy/language-directory-tester@workspace:tester":
   version: 0.0.0-use.local
-  resolution: "@source-academy/language-directory-tester@workspace:tester"
+  resolution: "@sourceacademy/language-directory-tester@workspace:tester"
   dependencies:
     "@blueprintjs/core": "npm:^6.18.0"
     "@blueprintjs/select": "npm:^6.3.4"
@@ -745,14 +745,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@source-academy/language-directory-workspace@workspace:.":
+"@sourceacademy/language-directory-workspace@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@source-academy/language-directory-workspace@workspace:."
+  resolution: "@sourceacademy/language-directory-workspace@workspace:."
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@stylistic/eslint-plugin": "npm:^5.10.0"
+    "@types/node": "npm:^26.1.2"
     "@vitest/eslint-plugin": "npm:^1.6.26"
     eslint: "npm:^10.8.0"
+    husky: "npm:^9.1.7"
+    typescript: "catalog:"
     typescript-eslint: "npm:^8.65.0"
   languageName: unknown
   linkType: soft
@@ -764,7 +767,6 @@ __metadata:
     "@rollup/plugin-terser": "npm:^0.4.4"
     "@rollup/plugin-typescript": "npm:^12.1.2"
     http-server: "npm:^14.1.1"
-    husky: "npm:^9.1.7"
     rollup: "npm:^4.59.0"
     tslib: "npm:^2.8.1"
     typescript: "catalog:"
