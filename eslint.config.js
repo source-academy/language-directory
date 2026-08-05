@@ -19,15 +19,17 @@ export default defineConfig(
     },
     rules: {
       'no-undef': 'off', // was error
+      'object-shorthand': ['warn', 'properties'],
       'prefer-const': 'error',
 
+      '@stylistic/brace-style': ['warn', '1tbs', { allowSingleLine: true }],
       '@stylistic/eol-last': 'warn',
       '@stylistic/indent': ['warn', 2, { SwitchCase: 1 }],
       '@stylistic/no-multiple-empty-lines': ['warn', { max: 1, maxEOF: 0 }],
       '@stylistic/no-multi-spaces': ['warn', { ignoreEOLComments: true }],
       '@stylistic/no-tabs': 'error',
       '@stylistic/no-trailing-spaces': 'warn',
-      '@stylistic/quotes': ['warn', 'single'],
+      '@stylistic/quotes': ['warn', 'single', { avoidEscape: true }],
       '@stylistic/semi': ['warn', 'always'],
     }
   },
@@ -44,6 +46,8 @@ export default defineConfig(
       }
     },
     rules: {
+      '@stylistic/type-annotation-spacing': ['warn', { overrides: { colon: { before: false, after: true } } }],
+
       '@typescript-eslint/consistent-type-assertions': ['warn', { assertionStyle: 'as' }],
       '@typescript-eslint/no-explicit-any': 'off', // was error
       '@typescript-eslint/no-import-type-side-effects': 'error',

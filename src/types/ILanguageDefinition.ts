@@ -3,7 +3,7 @@ import type * as monaco from 'monaco-editor-core';
 
 export interface TextbookDefinition {
   /** Base URL for the language's textbook JSON files. Must include a trailing slash (e.g. "https://sicp.sourceacademy.org/json_py/"). */
-  readonly url: string;
+  readonly url: `${string}/`;
 
   /** Display name for the textbook (e.g. "SICPy", "SICP JS"). */
   readonly name: string;
@@ -23,7 +23,6 @@ export interface ILanguageDefinition {
   readonly evaluators: IEvaluatorDefinition[];
 
   /** Editor configuration. WIP. */
-
   readonly editorConfig?: any;
 
   /** Textbook configuration for this language. */
