@@ -1,32 +1,24 @@
 // @ts-check
+
 import { defineConfig } from 'eslint/config';
-import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 import vitest from '@vitest/eslint-plugin';
 
 export default defineConfig(
   {
     // Global ignores
-    ignores: ["dist/**", ".yarn/**", ".pnp.*"]
+    ignores: ['dist/**', '.yarn/**', '.pnp.*']
   },
   eslint.configs.recommended,
   {
-    files: ['**/*.ts'],
-    extends: [tseslint.configs.recommended],
+    files: ['**/*.{ts,js}'],
     plugins: {
       '@stylistic': stylistic
     },
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        projectService: {
-          allowDefaultProject: ['vitest.config.ts'],
-        },
-        tsconfigRootDir: import.meta.dirname,
-      }
-    },
     rules: {
+      'no-undef': 'off', // was error
       'prefer-const': 'error',
 
       '@stylistic/eol-last': 'warn',
@@ -37,7 +29,21 @@ export default defineConfig(
       '@stylistic/no-trailing-spaces': 'warn',
       '@stylistic/quotes': ['warn', 'single'],
       '@stylistic/semi': ['warn', 'always'],
-
+    }
+  },
+  {
+    files: ['**/*.ts'],
+    extends: [tseslint.configs.recommended],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ['vitest.config.ts'],
+        },
+        tsconfigRootDir: import.meta.dirname,
+      }
+    },
+    rules: {
       '@typescript-eslint/consistent-type-assertions': ['warn', { assertionStyle: 'as' }],
       '@typescript-eslint/no-explicit-any': 'off', // was error
       '@typescript-eslint/no-import-type-side-effects': 'error',
@@ -47,7 +53,7 @@ export default defineConfig(
     }
   },
   {
-    files: ['**/*.test.ts'],
+    files: ['**/__tests__/**/*.test.ts'],
     extends: [vitest.configs.recommended]
   }
 );

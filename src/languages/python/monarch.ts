@@ -4,20 +4,17 @@ import type { IMonarchLanguage } from '../../types/monarchTypes';
  * Python keywords that are only allowed for Python §3 and Python §4.
  */
 export const extendedKeywords = [
-  'while',
-  'for',
-  'in',
   'break',
   'continue',
-  'is',
+  'for',
   'global',
+  'in',
+  'is',
   'nonlocal',
   'pass',
+  'while',
 ];
 
-/**
- * Simplified Monarch grammar for Python §1 and Python §2.
- */
 const baseMonarch = {
   defaultToken: '',
   tokenPostfix: '.python',
@@ -25,18 +22,18 @@ const baseMonarch = {
   illegalKeywords: [
     'as',
     'assert',
+    'async',
+    'await',
+    'case',
     'class',
     'del',
     'except',
     'finally',
     'match',
-    'case',
     'raise',
     'try',
     'with',
     'yield',
-    'async',
-    'await',
   ],
 
   keywords: [
@@ -53,11 +50,26 @@ const baseMonarch = {
     'return',
   ],
 
+  operators: [
+    '+', '-', '//', '/', '*', '**',
+    '>', '<', '>=', '<=',
+    '==', '!=',
+  ],
+
+  illegalOperators: [
+    '+=', '-=', '/=', '//=', '*=', '**=',
+    '|', '|=',
+    '&', '&=',
+    '^', '^=',
+  ],
+
   brackets: [
     { open: '{', close: '}', token: 'delimiter.curly' },
     { open: '[', close: ']', token: 'delimiter.bracket' },
     { open: '(', close: ')', token: 'delimiter.parenthesis' }
   ],
+
+  symbols: /[<>=/\-+*%^|&!]{1,3}/,
 
   tokenizer: {
     root: [
@@ -74,6 +86,12 @@ const baseMonarch = {
           '@keywords': 'keyword',
           '@illegalKeywords': 'keyword.illegal',
           '@default': 'identifier'
+        }
+      }],
+      [/@symbols/, {
+        cases: {
+          '@illegalOperators': 'keyword.illegal',
+          '@operators': 'keyword'
         }
       }]
     ],
@@ -127,7 +145,10 @@ const baseMonarch = {
   }
 } satisfies IMonarchLanguage;
 
-export const pythonBaseMonarch = {
+/**
+ * Simplified Monarch grammar for Python §1 and Python §2.
+ */
+export const pythonBaseMonarch: IMonarchLanguage = {
   ...baseMonarch,
   illegalKeywords: [
     ...baseMonarch.illegalKeywords,
@@ -138,10 +159,10 @@ export const pythonBaseMonarch = {
 /**
  * Extended Monarch grammar for Python §3 and Python §4.
  */
-export const pythonExtendedMonarch = {
+export const pythonExtendedMonarch: IMonarchLanguage = {
   ...baseMonarch,
   keywords: [
     ...pythonBaseMonarch.keywords,
     ...extendedKeywords
   ]
-} satisfies IMonarchLanguage;
+};
