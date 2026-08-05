@@ -51,7 +51,8 @@ const baseMonarch = {
   ],
 
   operators: [
-    '+', '-', '//', '/', '*', '**',
+    '=',
+    '+', '-', '//', '/', '*', '**', '%',
     '>', '<', '>=', '<=',
     '==', '!=',
   ],
@@ -69,7 +70,7 @@ const baseMonarch = {
     { open: '(', close: ')', token: 'delimiter.parenthesis' }
   ],
 
-  symbols: /[<>=/\-+*%^|&!]{1,3}/,
+  symbols: /[<>=/\-+*%^|&!]+/,
 
   tokenizer: {
     root: [
@@ -90,7 +91,7 @@ const baseMonarch = {
       }],
       [/@symbols/, {
         cases: {
-          '@illegalOperators': 'keyword.illegal',
+          '@illegalOperators': 'operator.illegal',
           '@operators': 'keyword'
         }
       }]

@@ -125,7 +125,7 @@ export const sourceBaseMonarch = {
       [/@symbols/, {
         cases: {
           '@operators': 'delimiter',
-          '@illegalOperators': 'delimiter.illegal',
+          '@illegalOperators': 'operator.illegal',
           '@default': ''
         }
       }],

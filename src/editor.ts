@@ -30,6 +30,7 @@ export const sourceAcademyEditorTheme = {
     { token: 'keyword', foreground: 'FF9D00' },
     { token: 'keyword.illegal', foreground: 'FF0000' },
     { token: 'number', foreground: 'FF628C' },
+    { token: 'operator.illegal', foreground: 'FF0000' },
     { token: 'string', foreground: 'FF628C' },
     { token: 'type', foreground: 'FFEE80' },
     { token: 'variable', foreground: 'CCCCCC' },
@@ -73,10 +74,21 @@ export const sourceAcademyEditorTheme = {
  * Default `monaco-editor` options for Source Academy applications
  */
 export const defaultEditorConfig = {
+  folding: false,
+  glyphMargin: false,
+  fontFamily: '\'Inconsolata\', \'Consolas\', monospace',
+  fontSize: 17,
   hover: {
     enabled: 'off'
   },
+  lineHeight: 17,
+  lineNumbersMinChars: 4,
   minimap: {
     enabled: false
   },
+  renderLineHighlight: 'gutter',
+  scrollbar: {
+    useShadows: false
+  },
+  scrollBeyondLastLine: false
 } satisfies monaco.editor.IEditorOptions;
