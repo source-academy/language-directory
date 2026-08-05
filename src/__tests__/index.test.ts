@@ -1,13 +1,13 @@
 import { describe, expect, test } from 'vitest';
-import languages from '../languages';
+import { languages } from '../languages';
 import type { ILanguageDefinition } from '../types';
-import type { IMonarchLanguage } from '../types/monarchTypes';
+import type * as monaco from 'monaco-editor-core';
 
 function monarchGrammarTests(lang: ILanguageDefinition) {
   const { monarchGrammar } = lang;
 
   describe.skipIf(typeof monarchGrammar !== 'object')('Monarch Grammar', () => {
-    const grammar = monarchGrammar as IMonarchLanguage;
+    const grammar = monarchGrammar as monaco.languages.IMonarchLanguage;
     const illegalKeywords: string[] | undefined = grammar.illegalKeywords;
 
     test.skipIf(illegalKeywords === undefined)('If it has illegal keywords, they should not also be in the keywords list', () => {

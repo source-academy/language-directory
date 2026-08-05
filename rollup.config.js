@@ -7,10 +7,10 @@ import typescript from '@rollup/plugin-typescript';
 export default defineConfig({
   plugins: [
     typescript({
-      exclude: ['**/__tests__']
+      exclude: ['**/__tests__/**']
     })
   ],
-  input: 'src/index.ts',
+  input: ['src/index.ts', 'src/util.ts'],
   output: {
     plugins: [terser()],
     dir: 'dist',

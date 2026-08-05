@@ -7,7 +7,7 @@ This repository acts as a directory for languages officially supported by Source
 ### As a static asset
 
 You may import the `languages` array directly after installing this repository
-(as `import { languages } from 'language-directory'`). This will cause the array
+(as `import { languages } from '@sourceacademy/language-directory'`). This will cause the array
 to be bundled together at build time.
 
 Caution: when including this repository as a dependency in your `package.json`,
@@ -21,7 +21,7 @@ The `languages` array is available dynamically at
 [`https://source-academy.github.io/language-directory/directory.json`](https://source-academy.github.io/language-directory/directory.json).
 
 In this case, you probably do not want to bundle the array at build time. You may
-bundle only the utility functions by importing from `'language-directory/dist/util'` instead.
+bundle only the utility functions by importing from `'@sourceacademy/language-directory/util'` instead.
 
 You can reconstruct the `languageMap` using the `generateLanguageMap` utility function.
 
@@ -33,7 +33,7 @@ Languages consist of an ID, a name, an array of evaluators capable of running th
 and an optional editor configuration.
 
 To add a new language to the languages directory, define your language according to the interface,
-and add the definition to the `languages` array in `src/languages.ts`.
+and add the definition to the `languages` array in `src/languages/index.ts`.
 
 ## Evaluator definitions
 

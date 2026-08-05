@@ -1,4 +1,4 @@
-import type { IMonarchLanguage } from '../../types/monarchTypes';
+import type * as monaco from 'monaco-editor-core';
 
 /**
  * Javascript keywords that are only allowed for Source §3 and Source §4.
@@ -217,9 +217,9 @@ export const sourceBaseMonarch = {
       { include: 'common' }
     ],
   },
-} satisfies IMonarchLanguage;
+} satisfies monaco.languages.IMonarchLanguage;
 
 export const sourceExtendedMonarch = {
   ...sourceBaseMonarch,
   keywords: [...sourceBaseMonarch.keywords, ...extendedKeywords]
-} satisfies IMonarchLanguage;
+} satisfies monaco.languages.IMonarchLanguage;

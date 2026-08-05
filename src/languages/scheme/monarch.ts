@@ -1,4 +1,4 @@
-import type { IMonarchLanguage } from '../../types/monarchTypes';
+import type * as monaco from 'monaco-editor-core';
 
 export const schemeBaseMonarch = {
   ignoreCase: false,
@@ -31,4 +31,4 @@ export const schemeBaseMonarch = {
       [/\s+/, 'white'],
     ],
   },
-} satisfies IMonarchLanguage;
+} satisfies monaco.languages.IMonarchLanguage;

@@ -1,4 +1,4 @@
-import type { IMonarchLanguage } from '../../types/monarchTypes';
+import type * as monaco from 'monaco-editor-core';
 
 /**
  * Python keywords that are only allowed for Python §3 and Python §4.
@@ -143,26 +143,26 @@ const baseMonarch = {
       [/\\$/, 'string']
     ]
   }
-} satisfies IMonarchLanguage;
+} satisfies monaco.languages.IMonarchLanguage;
 
 /**
  * Simplified Monarch grammar for Python §1 and Python §2.
  */
-export const pythonBaseMonarch: IMonarchLanguage = {
+export const pythonBaseMonarch = {
   ...baseMonarch,
   illegalKeywords: [
     ...baseMonarch.illegalKeywords,
     ...extendedKeywords
   ]
-};
+} satisfies monaco.languages.IMonarchLanguage;
 
 /**
  * Extended Monarch grammar for Python §3 and Python §4.
  */
-export const pythonExtendedMonarch: IMonarchLanguage = {
+export const pythonExtendedMonarch = {
   ...baseMonarch,
   keywords: [
     ...pythonBaseMonarch.keywords,
     ...extendedKeywords
   ]
-};
+} satisfies monaco.languages.IMonarchLanguage;
