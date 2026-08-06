@@ -1,13 +1,20 @@
-import terser from "@rollup/plugin-terser";
-import typescript from "@rollup/plugin-typescript";
+// @ts-check
 
-export default {
-    plugins: [typescript()],
-    input: ["src/index.ts", "src/languages.ts", "src/util.ts"],
-    output: {
-        plugins: [terser()],
-        dir: "dist",
-        format: "es",
-        sourcemap: true,
-    }
-}
+import { defineConfig } from 'rollup';
+import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
+
+export default defineConfig({
+  plugins: [
+    typescript({
+      exclude: ['**/__tests__/**']
+    })
+  ],
+  input: ['src/index.ts', 'src/util.ts'],
+  output: {
+    plugins: [terser()],
+    dir: 'dist',
+    format: 'es',
+    sourcemap: true,
+  }
+});
