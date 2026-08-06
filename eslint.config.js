@@ -23,7 +23,7 @@ export default defineConfig(
           {
             group: ['monaco-editor', 'monaco-editor-core'],
             allowTypeImports: true,
-            message: 'Can only import from monaco-editor-core as a type import'
+            message: 'Can only import from monaco-editor packages as a type import'
           }
         ]
       }],

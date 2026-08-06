@@ -1,7 +1,26 @@
 import type { languages } from 'monaco-editor-core';
 
 /**
- * Python keywords that are only allowed for Python §3 and Python §4.
+ * Python keywords that are only allowed for Python §1 and Python §2.
+ */
+export const baseKeywords = [
+  'and',
+  'as',
+  'def',
+  'elif',
+  'else',
+  'from',
+  'if',
+  'import',
+  'lambda',
+  'not',
+  'or',
+  'return',
+] as const;
+
+/**
+ * Python keywords that are only allowed for Python §3 and Python §4, excluding the
+ * ones defined in {@link baseKeywords}.
  */
 export const extendedKeywords = [
   'break',
@@ -13,42 +32,30 @@ export const extendedKeywords = [
   'nonlocal',
   'pass',
   'while',
-];
+] as const;
+
+/**
+ * Python keywords that are only allowed for the full variant
+ */
+export const fullOnlyKeywords = [
+  'assert',
+  'async',
+  'await',
+  'case',
+  'class',
+  'del',
+  'except',
+  'finally',
+  'match',
+  'raise',
+  'try',
+  'with',
+  'yield',
+] as const;
 
 const baseMonarch = {
   defaultToken: '',
   tokenPostfix: '.python',
-
-  illegalKeywords: [
-    'as',
-    'assert',
-    'async',
-    'await',
-    'case',
-    'class',
-    'del',
-    'except',
-    'finally',
-    'match',
-    'raise',
-    'try',
-    'with',
-    'yield',
-  ],
-
-  keywords: [
-    'and',
-    'def',
-    'elif',
-    'else',
-    'from',
-    'if',
-    'import',
-    'lambda',
-    'not',
-    'or',
-    'return',
-  ],
 
   operators: [
     '=',
@@ -151,9 +158,10 @@ const baseMonarch = {
  */
 export const pythonBaseMonarch = {
   ...baseMonarch,
+  keywords: baseKeywords,
   illegalKeywords: [
-    ...baseMonarch.illegalKeywords,
-    ...extendedKeywords
+    ...extendedKeywords,
+    ...fullOnlyKeywords
   ]
 } satisfies languages.IMonarchLanguage;
 
@@ -163,7 +171,8 @@ export const pythonBaseMonarch = {
 export const pythonExtendedMonarch = {
   ...baseMonarch,
   keywords: [
-    ...pythonBaseMonarch.keywords,
+    ...baseKeywords,
     ...extendedKeywords
-  ]
+  ],
+  illegalKeywords: fullOnlyKeywords
 } satisfies languages.IMonarchLanguage;

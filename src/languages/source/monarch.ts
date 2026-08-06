@@ -1,48 +1,79 @@
 import type { languages } from 'monaco-editor-core';
 
 /**
- * Javascript keywords that are only allowed for Source §3 and Source §4.
+ * Javascript keywords that are only allowed for Source §1 and Source §2
+ */
+export const baseKeywords = [
+  'break',
+  'continue',
+  'const',
+  'debugger',
+  'else',
+  'export',
+  'false',
+  'from',
+  'function',
+  'if',
+  'import',
+  'null',
+  'return',
+  'true',
+  'undefined',
+] as const;
+
+/**
+ * Javascript keywords that are only allowed for Source §3 and Source §4, excluding those
+ * in {@link baseKeywords}.
  */
 export const extendedKeywords = [
   'for',
   'let',
   'while'
-];
+] as const;
 
+/**
+ * Javascript keywords that are only allowed for the full variant.
+ */
+export const fullOnlyKeywords = [
+  'async',
+  'await',
+  'case',
+  'catch',
+  'class',
+  'constructor',
+  'default',
+  'delete',
+  'do',
+  'export',
+  'extends',
+  'finally',
+  'get',
+  'in',
+  'instanceof',
+  'new',
+  'super',
+  'switch',
+  'symbol',
+  'this',
+  'throw',
+  'try',
+  'typeof',
+  'var',
+  'void',
+  'with',
+  'yield',
+  'of'
+] as const;
+
+/**
+ * Monarch definition for Source §1 and Source §2
+ */
 export const sourceBaseMonarch = {
   defaultToken: '',
   tokenPostfix: '.js',
 
-  illegalKeywords: [
-    'async',
-    'await',
-    'case',
-    'catch',
-    'class',
-    'constructor',
-    'default',
-    'delete',
-    'do',
-    'export',
-    'extends',
-    'finally',
-    'get',
-    'in',
-    'instanceof',
-    'new',
-    'super',
-    'switch',
-    'symbol',
-    'this',
-    'throw',
-    'try',
-    'typeof',
-    'var',
-    'void',
-    'with',
-    'yield',
-    'of'
-  ],
+  keywords: baseKeywords,
+  illegalKeywords: fullOnlyKeywords,
 
   illegalOperators: [
     '==', '!=',
@@ -51,24 +82,6 @@ export const sourceBaseMonarch = {
     '&', '|', '^', '~',
     '+=', '-=', '*=', '**=', '/=', '%=',
     '<<=', '>>=', '>>>=', '&=', '|=', '^='
-  ],
-
-  keywords: [
-    'break',
-    'continue',
-    'const',
-    'debugger',
-    'else',
-    'export',
-    'false',
-    'from',
-    'function',
-    'if',
-    'import',
-    'null',
-    'return',
-    'true',
-    'undefined',
   ],
 
   // typeKeywords: [
@@ -219,6 +232,9 @@ export const sourceBaseMonarch = {
   },
 } satisfies languages.IMonarchLanguage;
 
+/**
+ * Monarch definition for Source §3 and Source §4
+ */
 export const sourceExtendedMonarch = {
   ...sourceBaseMonarch,
   keywords: [...sourceBaseMonarch.keywords, ...extendedKeywords]
