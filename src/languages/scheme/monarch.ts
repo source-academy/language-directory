@@ -1,7 +1,8 @@
-import type * as monaco from 'monaco-editor-core';
+import type { languages } from 'monaco-editor-core';
 
 export const schemeBaseMonarch = {
   ignoreCase: false,
+  tokenPostfix: '.scm',
   brackets: [
     { open: '(', close: ')', token: 'delimiter.parenthesis' },
     { open: '[', close: ']', token: 'delimiter.square' },
@@ -31,4 +32,4 @@ export const schemeBaseMonarch = {
       [/\s+/, 'white'],
     ],
   },
-} satisfies monaco.languages.IMonarchLanguage;
+} satisfies languages.IMonarchLanguage;

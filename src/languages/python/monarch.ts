@@ -1,4 +1,4 @@
-import type * as monaco from 'monaco-editor-core';
+import type { languages } from 'monaco-editor-core';
 
 /**
  * Python keywords that are only allowed for Python §3 and Python §4.
@@ -92,7 +92,7 @@ const baseMonarch = {
       [/@symbols/, {
         cases: {
           '@illegalOperators': 'operator.illegal',
-          '@operators': 'keyword'
+          '@operators': 'operator'
         }
       }]
     ],
@@ -144,7 +144,7 @@ const baseMonarch = {
       [/\\$/, 'string']
     ]
   }
-} satisfies monaco.languages.IMonarchLanguage;
+} satisfies languages.IMonarchLanguage;
 
 /**
  * Simplified Monarch grammar for Python §1 and Python §2.
@@ -155,7 +155,7 @@ export const pythonBaseMonarch = {
     ...baseMonarch.illegalKeywords,
     ...extendedKeywords
   ]
-} satisfies monaco.languages.IMonarchLanguage;
+} satisfies languages.IMonarchLanguage;
 
 /**
  * Extended Monarch grammar for Python §3 and Python §4.
@@ -166,4 +166,4 @@ export const pythonExtendedMonarch = {
     ...pythonBaseMonarch.keywords,
     ...extendedKeywords
   ]
-} satisfies monaco.languages.IMonarchLanguage;
+} satisfies languages.IMonarchLanguage;

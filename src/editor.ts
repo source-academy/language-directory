@@ -1,4 +1,4 @@
-import type * as monaco from 'monaco-editor-core';
+import type { editor } from 'monaco-editor-core';
 
 const aceSourceColors = {
   activeLineBackground: '#00000059',
@@ -30,6 +30,7 @@ export const sourceAcademyEditorTheme = {
     { token: 'keyword', foreground: 'FF9D00' },
     { token: 'keyword.illegal', foreground: 'FF0000' },
     { token: 'number', foreground: 'FF628C' },
+    { token: 'operator', foreground: 'FF9D00' },
     { token: 'operator.illegal', foreground: 'FF0000' },
     { token: 'string', foreground: 'FF628C' },
     { token: 'type', foreground: 'FFEE80' },
@@ -68,7 +69,7 @@ export const sourceAcademyEditorTheme = {
     'scrollbarSlider.hoverBackground': '#6B839A99',
     'scrollbarSlider.activeBackground': '#6B839ACC',
   },
-} satisfies monaco.editor.IStandaloneThemeData;
+} satisfies editor.IStandaloneThemeData;
 
 /**
  * Default `monaco-editor` options for Source Academy applications
@@ -91,4 +92,4 @@ export const defaultEditorConfig = {
     useShadows: false
   },
   scrollBeyondLastLine: false
-} satisfies monaco.editor.IEditorOptions;
+} satisfies editor.IEditorOptions;

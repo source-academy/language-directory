@@ -1,4 +1,4 @@
-import type * as monaco from 'monaco-editor-core';
+import type { languages } from 'monaco-editor-core';
 
 /**
  * Javascript keywords that are only allowed for Source §3 and Source §4.
@@ -124,7 +124,7 @@ export const sourceBaseMonarch = {
       [/[<>](?!@symbols)/, '@brackets'],
       [/@symbols/, {
         cases: {
-          '@operators': 'delimiter',
+          '@operators': 'operator',
           '@illegalOperators': 'operator.illegal',
           '@default': ''
         }
@@ -217,9 +217,9 @@ export const sourceBaseMonarch = {
       { include: 'common' }
     ],
   },
-} satisfies monaco.languages.IMonarchLanguage;
+} satisfies languages.IMonarchLanguage;
 
 export const sourceExtendedMonarch = {
   ...sourceBaseMonarch,
   keywords: [...sourceBaseMonarch.keywords, ...extendedKeywords]
-} satisfies monaco.languages.IMonarchLanguage;
+} satisfies languages.IMonarchLanguage;
