@@ -18,6 +18,15 @@ export default defineConfig(
       '@stylistic': stylistic
     },
     rules: {
+      'no-restricted-imports': ['error', {
+        patterns: [
+          {
+            group: ['monaco-editor', 'monaco-editor-core'],
+            allowTypeImports: true,
+            message: 'Can only import from monaco-editor-core as a type import'
+          }
+        ]
+      }],
       'no-undef': 'off', // was error
       'object-shorthand': ['warn', 'properties'],
       'prefer-const': 'error',

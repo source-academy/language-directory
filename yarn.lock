@@ -577,7 +577,6 @@ __metadata:
     husky: "npm:^9.1.7"
     monaco-editor-core: "npm:^0.56.0"
     rollup: "npm:^4.59.0"
-    tslib: "npm:^2.8.1"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.65.0"
     vitest: "npm:^4.1.10"
@@ -3017,13 +3016,6 @@ __metadata:
   peerDependencies:
     typescript: ">=4.8.4"
   checksum: 10c0/767849383c114e7f1971fa976b20e73ac28fd0c70d8d65c0004790bf4d8f89888c7e4cf6d5949f9c1beae9bc3c64835bef77bbe27fddf45a3c7b60cebcf85c8c
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.8.1":
-  version: 2.8.1
-  resolution: "tslib@npm:2.8.1"
-  checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
 
