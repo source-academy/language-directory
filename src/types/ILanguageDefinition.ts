@@ -32,6 +32,9 @@ interface ILanguageDefinition {
 
     /** File extension (without the leading dot) this language's files use — what the Playground names its default single-file entrypoint tab/file (e.g. "program.py") when none exists yet, and what a newly-created file in folder mode should default to. Defaults to `"js"` when omitted, matching every language predating this field. */
     readonly defaultFileExtension?: string;
+
+    /** Default program to be used in the editor for this language */
+    readonly defaultProgram?: string;
 }
 
 export type { ILanguageDefinition };
