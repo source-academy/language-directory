@@ -5,8 +5,7 @@ const python3Cse: IEvaluatorDefinition = {
     name: "Python §3",
     path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
     capabilities: [EvaluatorCapability.CSE],
-    welcome: `You have chosen the **CSE** evaluator, which runs Python §3 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`,
-    defaultProgram: `print("hello world")\n`
+    welcome: `You have chosen the **CSE** evaluator, which runs Python §3 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
 const python3Py2js: IEvaluatorDefinition = {
@@ -14,8 +13,7 @@ const python3Py2js: IEvaluatorDefinition = {
     name: "Python §3",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator3.js",
     capabilities: [],
-    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`,
-    defaultProgram: `print("hello world")\n`
+    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
 export const python3Language: ILanguageDefinition = {
