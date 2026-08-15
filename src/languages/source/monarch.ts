@@ -4,8 +4,6 @@ import type { languages } from 'monaco-editor-core';
  * Javascript keywords that are only allowed for Source §1 and Source §2
  */
 export const baseKeywords = [
-  'break',
-  'continue',
   'const',
   'debugger',
   'else',
@@ -26,6 +24,8 @@ export const baseKeywords = [
  * in {@link baseKeywords}.
  */
 export const extendedKeywords = [
+  'break',
+  'continue',
   'for',
   'let',
   'while'
@@ -44,13 +44,14 @@ export const fullOnlyKeywords = [
   'default',
   'delete',
   'do',
-  'export',
   'extends',
   'finally',
   'get',
   'in',
   'instanceof',
   'new',
+  'of',
+  'set',
   'super',
   'switch',
   'symbol',
@@ -62,7 +63,6 @@ export const fullOnlyKeywords = [
   'void',
   'with',
   'yield',
-  'of'
 ] as const;
 
 /**

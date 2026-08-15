@@ -1,5 +1,5 @@
 import type { IEvaluatorDefinition } from './IEvaluatorDefinition';
-import type * as monaco from 'monaco-editor-core';
+import type { languages } from 'monaco-editor-core';
 
 export interface TextbookDefinition {
   /** Base URL for the language's textbook JSON files. Must include a trailing slash (e.g. "https://sicp.sourceacademy.org/json_py/"). */
@@ -42,5 +42,5 @@ export interface ILanguageDefinition {
      * Monaco Editor uses.\
      * If a string is given, then it is assumed that is the name of the language to use when loaded by the Monaco Editor.
      */
-  readonly monarchGrammar: string | monaco.languages.IMonarchLanguage;
+  readonly monarchGrammar: string | languages.IMonarchLanguage;
 }
