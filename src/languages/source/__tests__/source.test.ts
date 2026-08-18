@@ -54,13 +54,18 @@ describe.for(sourceLanguage)('$name', ({ id: languageId, monarchGrammar: grammar
       expect(token, `Expected ${keyword} to be tokenized as a keyword in ${languageId}`).toBeDefined();
       expect(token!.type).toBe('keyword.js');
     }
+
+    expect(tokens).not.toContain(expect.objectContaining({ type: 'keyword.illegal.js' }));
   });
 
   test('tokenizes illegal keywords as keyword.illegal for this language', () => {
-    if (illegalKeywords.length === 0) return;
-
     const code = illegalKeywords.map(keyword => `${keyword} = 1`).join('\n');
     const tokens = tokenizeCode(code, languageId).flat();
+
+    if (illegalKeywords.length === 0) {
+      expect(tokens).not.toContain(expect.objectContaining({ type: 'keyword.illegal.js' }));
+      return;
+    }
 
     for (const keyword of illegalKeywords) {
       const token = tokens.find(each => each.contents === keyword);

@@ -4,10 +4,9 @@ import { pythonExtendedMonarch } from './monarch';
 const python4Cse: IEvaluatorDefinition = {
   id: 'python4Cse',
   name: 'Python §4',
-  path: 'https://source-academy.github.io/py-slang/PyCseEvaluator4.js',
+  path: 'http://localhost:4001/PyCseEvaluator4.js',
   capabilities: [EvaluatorCapability.CSE],
-  welcome: 'You have chosen the **CSE** evaluator, which runs Python §4 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).',
-  defaultProgram: 'print("hello world")\n'
+  welcome: 'You have chosen the **CSE** evaluator, which runs Python §4 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).'
 };
 
 const python4Py2js: IEvaluatorDefinition = {
@@ -15,8 +14,7 @@ const python4Py2js: IEvaluatorDefinition = {
   name: 'Python §4',
   path: 'https://source-academy.github.io/py-slang/Py2JsEvaluator4.js',
   capabilities: [],
-  welcome: 'You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser\'s own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).',
-  defaultProgram: 'print("hello world")\n'
+  welcome: 'You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser\'s own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).'
 };
 
 export const python4Language: ILanguageDefinition = {
@@ -27,9 +25,10 @@ export const python4Language: ILanguageDefinition = {
     python4Py2js,
     python4Cse,
   ],
-  monarchGrammar: pythonExtendedMonarch,
   defaultFileExtension: 'py',
+  defaultProgram: '# Type your program in here!\n\n',
+  monarchGrammar: pythonExtendedMonarch,
   welcome: `Welcome to the Source Academy playground!
-  
+
 The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §4**](https://docs.sourceacademy.org/python/python_4/), matching [**SICPy §4**](https://sourceacademy.org/sicpy/4).`
 };

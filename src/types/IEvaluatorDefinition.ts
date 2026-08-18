@@ -15,7 +15,4 @@ export interface IEvaluatorDefinition {
 
   /** Welcome/introduction text shown in the playground when this evaluator is selected. Supports markdown. */
   readonly welcome?: string;
-
-  /** Default program shown in the editor when this evaluator is first selected. */
-  readonly defaultProgram?: string;
 }

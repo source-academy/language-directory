@@ -72,7 +72,8 @@ export default defineConfig(
     files: ['**/__tests__/**/*.ts'],
     extends: [vitest.configs.recommended],
     rules: {
-      'no-restricted-imports': 'off'
+      'no-restricted-imports': 'off',
+      'vitest/no-conditional-expect': 'off' // was error
     }
   }
 );
