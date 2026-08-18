@@ -1,4 +1,4 @@
-import type { languages } from 'monaco-editor-core';
+import type { languages } from 'monaco-editor';
 
 export const schemeBaseMonarch = {
   ignoreCase: false,

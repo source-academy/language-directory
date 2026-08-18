@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { languages } from '../languages';
 import type { ILanguageDefinition } from '../types';
-import type * as monaco from 'monaco-editor-core';
+import type * as monaco from 'monaco-editor';
 
 function monarchGrammarTests(lang: ILanguageDefinition) {
   const { monarchGrammar } = lang;

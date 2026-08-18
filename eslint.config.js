@@ -69,7 +69,10 @@ export default defineConfig(
     }
   },
   {
-    files: ['**/__tests__/**/*.test.ts'],
-    extends: [vitest.configs.recommended]
+    files: ['**/__tests__/**/*.ts'],
+    extends: [vitest.configs.recommended],
+    rules: {
+      'no-restricted-imports': 'off'
+    }
   }
 );

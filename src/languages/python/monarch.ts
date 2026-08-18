@@ -1,4 +1,4 @@
-import type { languages } from 'monaco-editor-core';
+import type { languages } from 'monaco-editor';
 
 /**
  * Python keywords that are only allowed for Python §1 and Python §2.

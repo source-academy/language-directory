@@ -1,4 +1,4 @@
-import type { languages } from 'monaco-editor-core';
+import type { languages } from 'monaco-editor';
 
 /**
  * Javascript keywords that are only allowed for Source §1 and Source §2
@@ -115,6 +115,9 @@ export const sourceBaseMonarch = {
     ],
 
     common: [
+      // `as` is only a keyword in import/export alias clauses, not as a general identifier.
+      // [/\bas\b(?=\s+[a-zA-Z_$][\w$]*)/, 'keyword'],
+
       // identifiers and keywords
       [/[a-z_$][\w$]*/, {
         cases: {

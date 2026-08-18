@@ -1,5 +1,5 @@
 import type { IEvaluatorDefinition } from './IEvaluatorDefinition';
-import type { languages } from 'monaco-editor-core';
+import type { languages } from 'monaco-editor';
 
 export interface TextbookDefinition {
   /** Base URL for the language's textbook JSON files. Must include a trailing slash (e.g. "https://sicp.sourceacademy.org/json_py/"). */

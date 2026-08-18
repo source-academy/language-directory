@@ -1,4 +1,4 @@
-import type { editor } from 'monaco-editor-core';
+import type { editor } from 'monaco-editor';
 
 const aceSourceColors = {
   activeLineBackground: '#00000059',
