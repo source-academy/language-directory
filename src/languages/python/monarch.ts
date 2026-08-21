@@ -71,6 +71,8 @@ const baseMonarch = {
     '^', '^=',
   ],
 
+  constants: ['True', 'False', 'None'],
+
   brackets: [
     { open: '{', close: '}', token: 'delimiter.curly' },
     { open: '[', close: ']', token: 'delimiter.bracket' },
@@ -92,6 +94,7 @@ const baseMonarch = {
       [/[a-zA-Z]\w*/, {
         cases: {
           '@keywords': 'keyword',
+          '@constants': 'constant',
           '@illegalKeywords': 'keyword.illegal',
           '@default': 'identifier'
         }
