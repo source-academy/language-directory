@@ -26,24 +26,24 @@ function monarchGrammarTests(lang: ILanguageDefinition) {
 }
 
 test('Every language should have a unique id', () => {
-  const idMap = Object.values(languages).reduce<Record<string, ILanguageDefinition[]>>((res, lang) => {
+  const idMap = Object.values(languages).reduce<Record<string, string[]>>((res, lang) => {
     if (lang.id in res) {
       return {
         ...res,
-        [lang.id]: [...res[lang.id], lang]
+        [lang.id]: [...res[lang.id], lang.name]
       };
     }
 
     return {
       ...res,
-      [lang.id]: [lang]
+      [lang.id]: [lang.name]
     };
   }, {});
 
   Object.entries(idMap).forEach(([id, langs]) => {
     if (langs.length === 1) return;
 
-    const langStr = langs.map(({ name }) => name).join(', ');
+    const langStr = langs.join(', ');
     expect.fail(`There are ${langs.length} languages with id ${id}: ${langStr}`);
   });
 });
