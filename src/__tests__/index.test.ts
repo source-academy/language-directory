@@ -26,7 +26,7 @@ function monarchGrammarTests(lang: ILanguageDefinition) {
 }
 
 test('Every language should have a unique id', () => {
-  const idMap = Object.values(languages).reduce<Record<string, string[]>>((res, lang) => {
+  const idMap = languages.reduce<Record<string, string[]>>((res, lang) => {
     if (lang.id in res) {
       return {
         ...res,
@@ -48,6 +48,6 @@ test('Every language should have a unique id', () => {
   });
 });
 
-describe.each(Object.values(languages))('$name', lang => {
+describe.each(languages)('$name', lang => {
   monarchGrammarTests(lang);
 });
