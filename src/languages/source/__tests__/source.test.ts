@@ -73,4 +73,20 @@ describe.for(sourceLanguage)('$name', ({ id: languageId, monarchGrammar: grammar
       expect(token!.type).toBe('keyword.illegal.js');
     }
   });
+
+  test('does not start a multiline comment when a regexp contains a literal /* sequence', () => {
+    const snippets = [
+      'const re = /a\\/*b/;',
+      'const re = /[\\/*]/;',
+      'const re = /a\\/\\*b/;',
+      'const re = /\\/*/;'
+    ];
+
+    for (const code of snippets) {
+      const tokens = tokenizeCode(code, languageId).flat();
+      const commentTokens = tokens.filter(token => token.type.startsWith('comment'));
+      expect(commentTokens, `Regex snippet should not tokenize as comments: ${code}`).toEqual([]);
+      expect(tokens.some(token => token.contents.includes('/'))).toBe(true);
+    }
+  });
 });
