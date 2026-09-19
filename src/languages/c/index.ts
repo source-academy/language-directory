@@ -24,11 +24,11 @@ export const cLanguage: ILanguageDefinition = {
     foldersEnabled: false,
     // ILanguageDefinition#editorConfig is still WIP and no other language populates it yet --
     // real (semantic, evaluator-driven) highlighting is the autocomplete/highlight-rules protocol
-    // AutocompletePlugin exposes, which c-viz's evaluators don't implement. 
+    // AutocompletePlugin exposes, which c-interpreter's evaluators don't implement.
     // This is the cheaper, static fallback: ace-builds' bundled generic C/C++ mode 
     // (already registered app-side via AceHelper.ts's import of ace-builds/src-noconflict/mode-c_cpp), 
     // picked up by Editor.tsx's own directoryAceMode fallback whenever no evaluator-pushed mode is live. 
-    // Lexical, not semantic -- it doesn't know c-viz only accepts a subset of C.
+    // Lexical, not semantic -- it doesn't know c-interpreter only accepts a subset of C.
     editorConfig: { aceMode: "c_cpp" },
     welcome: `Welcome to the Source Academy playground!
 
