@@ -23,6 +23,7 @@ export const source1Language: ILanguageDefinition = {
         source1Default,
         source1Stepper
     ],
+    defaultProgram: "// Type your program in here!\n\n",
     welcome: `Welcome to the Source Academy playground!
 
 The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses JavaScript sublanguages that we call [_Source_](https://docs.sourceacademy.org/). You have chosen **Source §1**, matching SICP JS §1.`
