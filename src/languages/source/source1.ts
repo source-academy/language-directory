@@ -1,11 +1,18 @@
-import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
 const source1Default: IEvaluatorDefinition = {
     id: "source1Default",
     name: "Default",
-    path: "https://source-academy.github.io/js-slang-lean/evaluator1.js",
+    path: "https://source-academy.github.io/js-slang/SourceEvaluator1.js",
     capabilities: [],
-    welcome: `You have chosen the **Default** evaluator for Source §1.`
+    welcome: `You have chosen the **Default** evaluator for Source §1, which compiles your program to JavaScript and runs it on the browser's own JavaScript engine.`
+};
+
+const source1Stepper: IEvaluatorDefinition = {
+    id: "source1Stepper",
+    name: "Stepper",
+    path: "https://source-academy.github.io/js-slang/SourceStepperEvaluator1.js",
+    capabilities: [EvaluatorCapability.STEPPER]
 };
 
 export const source1Language: ILanguageDefinition = {
@@ -13,7 +20,8 @@ export const source1Language: ILanguageDefinition = {
     name: "Source §1",
     textbook: { url: "https://sicp.sourceacademy.org/json/", name: "SICP JS", titleImageUrl: "https://source-academy.github.io/sicp/sicpjs.png" },
     evaluators: [
-        source1Default
+        source1Default,
+        source1Stepper
     ],
     welcome: `Welcome to the Source Academy playground!
 

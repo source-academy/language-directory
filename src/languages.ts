@@ -1,10 +1,12 @@
 import { pythonLanguage } from "./languages/python";
+import { sourceLanguage } from "./languages/source";
 import { schemeLanguage } from "./languages/scheme";
 import { ILanguageDefinition } from "./types";
 import { generateLanguageMap } from "./util";
 
 export const languages: ILanguageDefinition[] = [
     ...pythonLanguage,
+    ...sourceLanguage,
     schemeLanguage,
 ];
 
