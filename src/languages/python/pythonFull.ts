@@ -15,4 +15,5 @@ export const pythonFullLanguage: ILanguageDefinition = {
         pythonFullPyodide
     ],
     defaultFileExtension: "py",
+    defaultProgram: "# Type your program in here!\n\n",
 };
