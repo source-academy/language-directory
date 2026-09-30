@@ -1,5 +1,5 @@
 {
-  "name": "language-directory",
+  "name": "@sourceacademy/language-directory",
   "packageManager": "yarn@4.13.0",
   "version": "0.0.27",
   "description": "A directory for languages supported by Source Academy.",
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "rollup -c && yarn make-json",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint",
+    "lint": "eslint --concurrency=auto",
     "start": "rollup -cw --watch.onEnd='yarn make-json' & http-server ./dist -p8125 -c-1 --cors &",
     "make-json": "node ./scripts/make-json.ts > dist/directory.json",
     "prepack": "yarn build",
