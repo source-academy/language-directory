@@ -1,7 +1,7 @@
 {
-  "name": "@sourceacademy/language-directory",
+  "name": "language-directory",
   "packageManager": "yarn@4.13.0",
-  "version": "0.1.0",
+  "version": "0.0.27",
   "description": "A directory for languages supported by Source Academy.",
   "type": "module",
   "exports": {

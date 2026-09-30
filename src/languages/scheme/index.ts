@@ -13,5 +13,6 @@ export const schemeLanguage: ILanguageDefinition = {
   name: 'Scheme',
   evaluators: [schemeEvaluator],
   defaultFileExtension: 'scm',
-  monarchGrammar: schemeBaseMonarch
+  monarchGrammar: schemeBaseMonarch,
+  defaultProgram: ';; Type your program in here!\n\n',
 };

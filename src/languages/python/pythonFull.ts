@@ -16,4 +16,5 @@ export const pythonFullLanguage: ILanguageDefinition = {
   ],
   monarchGrammar: 'python',
   defaultFileExtension: 'py',
+  defaultProgram: '# Type your program in here!\n\n',
 };
