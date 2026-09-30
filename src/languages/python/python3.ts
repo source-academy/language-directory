@@ -16,6 +16,13 @@ const python3Py2js: IEvaluatorDefinition = {
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
+const python3Ev3: IEvaluatorDefinition = {
+    id: "python3Ev3",
+    name: "Python §3",
+    path: "https://source-academy.github.io/py-slang/ev3-remote-runner.js",
+    capabilities: [EvaluatorCapability.EV3],
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
@@ -23,6 +30,7 @@ export const python3Language: ILanguageDefinition = {
     evaluators: [
         python3Py2js,
         python3Cse,
+        python3Ev3,
     ],
     defaultFileExtension: "py",
     defaultProgram: "# Type your program in here!\n\n",
