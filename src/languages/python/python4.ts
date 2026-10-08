@@ -16,6 +16,13 @@ const python4Py2js: IEvaluatorDefinition = {
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
+const python4EStepper: IEvaluatorDefinition = {
+    id: "python4EStepper",
+    name: "Python §4",
+    path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator4.js",
+    capabilities: [EvaluatorCapability.E_STEPPER],
+};
+
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
@@ -23,6 +30,7 @@ export const python4Language: ILanguageDefinition = {
     evaluators: [
         python4Py2js,
         python4Cse,
+        python4EStepper,
     ],
     defaultFileExtension: "py",
     defaultProgram: "# Type your program in here!\n\n",
