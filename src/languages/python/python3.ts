@@ -23,6 +23,13 @@ const python3Ev3: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.EV3],
 };
 
+const python3EStepper: IEvaluatorDefinition = {
+    id: "python3EStepper",
+    name: "Python §3",
+    path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator3.js",
+    capabilities: [EvaluatorCapability.E_STEPPER],
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
@@ -30,6 +37,7 @@ export const python3Language: ILanguageDefinition = {
     evaluators: [
         python3Py2js,
         python3Cse,
+        python3EStepper,
         python3Ev3,
     ],
     defaultFileExtension: "py",
