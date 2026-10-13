@@ -20,6 +20,7 @@ export const source3Language: ILanguageDefinition = {
     id: "source3",
     name: "JavaScript §3",
     textbook: { url: "https://sicp.sourceacademy.org/json/", name: "SICP JS", titleImageUrl: "https://source-academy.github.io/sicp/sicpjs.png" },
+    documentation: { languageUrl: "https://docs.sourceacademy.org/javascript/javascript_3/" },
     evaluators: [
         source3Default,
         source3Cse
@@ -27,5 +28,5 @@ export const source3Language: ILanguageDefinition = {
     defaultProgram: "// Type your program in here!\n\n",
     welcome: `Welcome to the Source Academy playground!
 
-The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses restricted [JavaScript sublanguages](https://docs.sourceacademy.org/). You have chosen **JavaScript §3**, matching SICP JS §3.`
+The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses restricted [JavaScript sublanguages](https://docs.sourceacademy.org/javascript/). You have chosen **JavaScript §3**, matching SICP JS §3.`
 };
