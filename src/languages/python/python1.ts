@@ -19,6 +19,7 @@ export const python1Language: ILanguageDefinition = {
     id: "python1",
     name: "Python §1",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
+    documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_1/" },
     evaluators: [
         python1Py2js,
         python1Stepper,
