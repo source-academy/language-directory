@@ -24,6 +24,14 @@ interface ILanguageDefinition {
         readonly titleImageUrl?: string;
     };
 
+    /** Documentation shown in the frontend's Documentation tab for this language. */
+    readonly documentation?: {
+        /** URL of the language's documentation. The frontend falls back to its generic documentation page when omitted. */
+        readonly languageUrl?: string;
+        /** URL of the modules documentation for this language. The frontend falls back to its default modules documentation when omitted. */
+        readonly modulesUrl?: string;
+    };
+
     /** Welcome/introduction text shown in the playground when this language is selected. Supports markdown. */
     readonly welcome?: string;
 
