@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python1Py2js: IEvaluatorDefinition = {
     id: "python1Py2js",
-    name: "Python §1",
+    name: "py2js",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator1.js",
     capabilities: [],
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §1 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
@@ -15,6 +15,14 @@ const python1Stepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.STEPPER]
 };
 
+const python1Pynter: IEvaluatorDefinition = {
+    id: "python1Pynter",
+    name: "Pynter",
+    path: "https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js",
+    capabilities: [],
+    welcome: `You have chosen the **Pynter** evaluator, which compiles Python §1 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.`
+};
+
 export const python1Language: ILanguageDefinition = {
     id: "python1",
     name: "Python §1",
@@ -22,6 +30,7 @@ export const python1Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_1/" },
     evaluators: [
         python1Py2js,
+        python1Pynter,
         python1Stepper,
     ],
     // §1 has no pair/list library, which local-file imports need to build

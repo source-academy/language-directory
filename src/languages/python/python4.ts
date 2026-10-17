@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python4Py2js: IEvaluatorDefinition = {
     id: "python4Py2js",
-    name: "Python §4",
+    name: "py2js",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator4.js",
     capabilities: [],
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
@@ -15,6 +15,14 @@ const python4EStepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.E_STEPPER],
 };
 
+const python4Pynter: IEvaluatorDefinition = {
+    id: "python4Pynter",
+    name: "Pynter",
+    path: "https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js",
+    capabilities: [],
+    welcome: `You have chosen the **Pynter** evaluator, which compiles Python §4 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.`
+};
+
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
@@ -22,6 +30,7 @@ export const python4Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4/" },
     evaluators: [
         python4Py2js,
+        python4Pynter,
         python4EStepper,
     ],
     defaultFileExtension: "py",
