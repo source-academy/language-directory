@@ -31,5 +31,5 @@ export const python1Language: ILanguageDefinition = {
     defaultProgram: "# Type your program in here!\n\n",
     welcome: `Welcome to the Source Academy playground!
 
-The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §1**](https://docs.sourceacademy.org/python/python_1/), matching [**SICPy §1**](https://sourceacademy.org/sicpy/1).`
+The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §1**](https://docs.sourceacademy.org/python/python_1/), matching [**SICPy §1**](https://sourceacademy.org/sicpy/1). Read the [Python Style Guide](https://docs.sourceacademy.org/python/python_styleguide.pdf) for how to lay out your programs.`
 };
