@@ -8,7 +8,18 @@ export interface TextbookConfig {
   readonly name: string;
   /** URL of the textbook's title/cover image. */
   readonly titleImageUrl?: string;
-};
+}
+
+/**
+ * Documentation shown in the frontend's Documentation tab for a given language.
+ */
+export interface DocumentationConfig {
+  /** URL of the language's documentation. The frontend falls back to its generic documentation page when omitted. */
+  readonly languageUrl?: string;
+
+  /** URL of the modules documentation for this language. The frontend falls back to its default modules documentation when omitted. */
+  readonly modulesUrl?: string;
+}
 
 export interface ILanguageDefinition {
   /** The language's identifier. */
@@ -21,8 +32,10 @@ export interface ILanguageDefinition {
   readonly evaluators: IEvaluatorDefinition[];
 
   /** Editor configuration. WIP. */
-
   readonly editorConfig?: any;
+
+  /** Documentation shown in the frontend's Documentation tab for this language. */
+  readonly documentation?: DocumentationConfig;
 
   /** Textbook configuration for this language. */
   readonly textbook?: TextbookConfig;

@@ -20,6 +20,7 @@ export const python1Language: ILanguageDefinition = {
   id: 'python1',
   name: 'Python §1',
   textbook: { url: 'https://sicp.sourceacademy.org/json_py/', name: 'SICPy', titleImageUrl: 'https://source-academy.github.io/sicp/sicpy.png' },
+  documentation: { languageUrl: 'https://docs.sourceacademy.org/python/python_1/' },
   evaluators: [
     python1Py2js,
     python1Stepper,
@@ -29,7 +30,8 @@ export const python1Language: ILanguageDefinition = {
   // the exports-transfer structure they pass between files.
   foldersEnabled: false,
   defaultFileExtension: 'py',
+  defaultProgram: '# Type your program in here!\n\n',
   welcome: `Welcome to the Source Academy playground!
-  
-The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §1**](https://docs.sourceacademy.org/python/python_1/), matching [**SICPy §1**](https://sourceacademy.org/sicpy/1).`
+
+The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §1**](https://docs.sourceacademy.org/python/python_1/), matching [**SICPy §1**](https://sourceacademy.org/sicpy/1). Read the [Python Style Guide](https://docs.sourceacademy.org/python/python_styleguide.pdf) for how to lay out your programs.`
 };

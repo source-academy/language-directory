@@ -21,6 +21,7 @@ export const source4Language: ILanguageDefinition = {
   id: 'source4',
   name: 'JavaScript §4',
   textbook: { url: 'https://sicp.sourceacademy.org/json/', name: 'SICP JS', titleImageUrl: 'https://source-academy.github.io/sicp/sicpjs.png' },
+  documentation: { languageUrl: 'https://docs.sourceacademy.org/javascript/javascript_4/' },
   evaluators: [
     source4Default,
     source4Cse
@@ -29,5 +30,5 @@ export const source4Language: ILanguageDefinition = {
   defaultProgram: '// Type your program in here!\n\n',
   welcome: `Welcome to the Source Academy playground!
 
-The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses restricted [JavaScript sublanguages](https://docs.sourceacademy.org/). You have chosen **JavaScript §4**, matching SICP JS §4.`
+The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses restricted [JavaScript sublanguages](https://docs.sourceacademy.org/javascript/). You have chosen **JavaScript §4**, matching SICP JS §4.`
 };

@@ -20,13 +20,14 @@ export const source1Language: ILanguageDefinition = {
   id: 'source1',
   name: 'JavaScript §1',
   textbook: { url: 'https://sicp.sourceacademy.org/json/', name: 'SICP JS', titleImageUrl: 'https://source-academy.github.io/sicp/sicpjs.png' },
+  monarchGrammar: sourceBaseMonarch,
+  documentation: { languageUrl: 'https://docs.sourceacademy.org/javascript/javascript_1/' },
   evaluators: [
     source1Default,
     source1Stepper
   ],
-  monarchGrammar: sourceBaseMonarch,
   defaultProgram: '// Type your program in here!\n\n',
   welcome: `Welcome to the Source Academy playground!
 
-The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses restricted [JavaScript sublanguages](https://docs.sourceacademy.org/). You have chosen **JavaScript §1**, matching SICP JS §1.`
+The book [_Structure and Interpretation of Computer Programs, JavaScript Edition_](https://sourceacademy.org/sicpjs/) uses restricted [JavaScript sublanguages](https://docs.sourceacademy.org/javascript/). You have chosen **JavaScript §1**, matching SICP JS §1.`
 };

@@ -30,7 +30,11 @@ You can reconstruct the `languageMap` using the `generateLanguageMap` utility fu
 Language definitions should follow the `ILanguageDefinition` interface.
 
 Languages consist of an ID, a name, an array of evaluators capable of running the given language,
-and an optional editor configuration.
+and optional settings such as an editor configuration, a textbook, and documentation links.
+
+The optional `documentation` field sets the pages shown in the frontend's Documentation tab:
+`languageUrl` for the language's own documentation, and `modulesUrl` for its modules documentation.
+The frontend falls back to its default pages for any URL left out.
 
 To add a new language to the languages directory, define your language according to the interface,
 and add the definition to the `languages` array in `src/languages/index.ts`.
