@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python4Py2js: IEvaluatorDefinition = {
     id: "python4Py2js",
-    name: "Python §4",
+    name: "py2js",
     path: "https://source-academy.github.io/py-slang/Py2JsEvaluator4.js",
     capabilities: [],
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
@@ -28,5 +28,5 @@ export const python4Language: ILanguageDefinition = {
     defaultProgram: "# Type your program in here!\n\n",
     welcome: `Welcome to the Source Academy playground!
 
-The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §4**](https://docs.sourceacademy.org/python/python_4/), matching [**SICPy §4**](https://sourceacademy.org/sicpy/4).`
+The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §4**](https://docs.sourceacademy.org/python/python_4/), matching [**SICPy §4**](https://sourceacademy.org/sicpy/4). Read the [Python Style Guide](https://docs.sourceacademy.org/python/python_styleguide.pdf) for how to lay out your programs.`
 };
