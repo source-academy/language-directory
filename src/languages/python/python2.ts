@@ -15,14 +15,6 @@ const python2Stepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.STEPPER]
 };
 
-const python2Pynter: IEvaluatorDefinition = {
-    id: "python2Pynter",
-    name: "Pynter",
-    path: "https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js",
-    capabilities: [],
-    welcome: `You have chosen the **Pynter** evaluator, which compiles Python §2 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.`
-};
-
 export const python2Language: ILanguageDefinition = {
     id: "python2",
     name: "Python §2",
@@ -30,7 +22,6 @@ export const python2Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_2/" },
     evaluators: [
         python2Py2js,
-        python2Pynter,
         python2Stepper,
     ],
     defaultFileExtension: "py",

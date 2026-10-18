@@ -27,7 +27,7 @@ const python3Pynter: IEvaluatorDefinition = {
     name: "Pynter",
     path: "https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js",
     capabilities: [],
-    welcome: `You have chosen the **Pynter** evaluator, which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.`
+    welcome: `You have chosen the **Pynter** evaluator (experimental), which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.\n\nThis evaluator does not yet support the pair, list, stream and visualizer libraries, nor Source Academy modules.`
 };
 
 export const python3Language: ILanguageDefinition = {
