@@ -1,49 +1,51 @@
-import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
+import { EvaluatorCapability, type IEvaluatorDefinition, type ILanguageDefinition } from '../../types';
+import { pythonExtendedMonarch } from './monarch';
 
 const python3Py2js: IEvaluatorDefinition = {
-    id: "python3Py2js",
-    name: "py2js",
-    path: "https://source-academy.github.io/py-slang/Py2JsEvaluator3.js",
-    capabilities: [],
-    welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+  id: 'python3Py2js',
+  name: 'py2js',
+  path: 'https://source-academy.github.io/py-slang/Py2JsEvaluator3.js',
+  capabilities: [],
+  welcome: 'You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser\'s own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).'
 };
 
 const python3Ev3: IEvaluatorDefinition = {
-    id: "python3Ev3",
-    name: "Python §3",
-    path: "https://source-academy.github.io/py-slang/ev3-remote-runner.js",
-    capabilities: [EvaluatorCapability.EV3],
+  id: 'python3Ev3',
+  name: 'Python §3',
+  path: 'https://source-academy.github.io/py-slang/ev3-remote-runner.js',
+  capabilities: [EvaluatorCapability.EV3],
 };
 
 const python3EStepper: IEvaluatorDefinition = {
-    id: "python3EStepper",
-    name: "Python §3",
-    path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator3.js",
-    capabilities: [EvaluatorCapability.E_STEPPER],
+  id: 'python3EStepper',
+  name: 'Python §3',
+  path: 'https://source-academy.github.io/py-slang/PyEStepperEvaluator3.js',
+  capabilities: [EvaluatorCapability.E_STEPPER],
 };
 
 const python3Pynter: IEvaluatorDefinition = {
-    id: "python3Pynter",
-    name: "Pynter",
-    path: "https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js",
-    capabilities: [],
-    welcome: `You have chosen the **Pynter** evaluator (experimental), which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.\n\nThis evaluator does not yet support the pair, list, stream and visualizer libraries, nor Source Academy modules.`
+  id: 'python3Pynter',
+  name: 'Pynter',
+  path: 'https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js',
+  capabilities: [],
+  welcome: 'You have chosen the **Pynter** evaluator (experimental), which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy\'s bytecode virtual machine written in C, compiled to WebAssembly.\n\nThis evaluator does not yet support the pair, list, stream and visualizer libraries, nor Source Academy modules.'
 };
 
 export const python3Language: ILanguageDefinition = {
-    id: "python3",
-    name: "Python §3",
-    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
-    documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_3/" },
-    evaluators: [
-        python3Py2js,
-        python3Pynter,
-        python3EStepper,
-        python3Ev3,
-    ],
-    defaultFileExtension: "py",
-    defaultProgram: "# Type your program in here!\n\n",
-    welcome: `Welcome to the Source Academy playground!
+  id: 'python3',
+  name: 'Python §3',
+  textbook: { url: 'https://sicp.sourceacademy.org/json_py/', name: 'SICPy', titleImageUrl: 'https://source-academy.github.io/sicp/sicpy.png' },
+  documentation: { languageUrl: 'https://docs.sourceacademy.org/python/python_3/' },
+  monarchGrammar: pythonExtendedMonarch,
+  evaluators: [
+    python3Py2js,
+    python3Pynter,
+    python3EStepper,
+    python3Ev3,
+  ],
+  defaultFileExtension: 'py',
+  defaultProgram: '# Type your program in here!\n\n',
+  welcome: `Welcome to the Source Academy playground!
 
 The book [_Structure and Interpretation of Computer Programs, Python Edition_](https://sourceacademy.org/sicpy/) uses Python sublanguages that match the textbook chapters. You have chosen [**Python §3**](https://docs.sourceacademy.org/python/python_3/), matching [**SICPy §3**](https://sourceacademy.org/sicpy/3). Read the [Python Style Guide](https://docs.sourceacademy.org/python/python_styleguide.pdf) for how to lay out your programs.`
 };
