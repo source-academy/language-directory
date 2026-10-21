@@ -3,7 +3,7 @@ import { pythonExtendedMonarch } from './monarch';
 
 const python3Py2js: IEvaluatorDefinition = {
   id: 'python3Py2js',
-  name: 'Python §3',
+  name: 'py2js',
   path: 'https://source-academy.github.io/py-slang/Py2JsEvaluator3.js',
   capabilities: [],
   welcome: 'You have chosen the **Py2JS** evaluator, which compiles Python §3 directly to JavaScript and runs it on the browser\'s own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).'
@@ -23,6 +23,14 @@ const python3EStepper: IEvaluatorDefinition = {
   capabilities: [EvaluatorCapability.E_STEPPER],
 };
 
+const python3Pynter: IEvaluatorDefinition = {
+  id: 'python3Pynter',
+  name: 'Pynter',
+  path: 'https://source-academy.github.io/py-slang/PyPvmlPynterEvaluator.js',
+  capabilities: [],
+  welcome: 'You have chosen the **Pynter** evaluator (experimental), which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy\'s bytecode virtual machine written in C, compiled to WebAssembly.\n\nThis evaluator does not yet support the pair, list, stream and visualizer libraries, nor Source Academy modules.'
+};
+
 export const python3Language: ILanguageDefinition = {
   id: 'python3',
   name: 'Python §3',
@@ -31,6 +39,7 @@ export const python3Language: ILanguageDefinition = {
   monarchGrammar: pythonExtendedMonarch,
   evaluators: [
     python3Py2js,
+    python3Pynter,
     python3EStepper,
     python3Ev3,
   ],

@@ -3,7 +3,7 @@ import { pythonBaseMonarch } from './monarch';
 
 const python2Py2js: IEvaluatorDefinition = {
   id: 'python2Py2js',
-  name: 'Python §2',
+  name: 'py2js',
   path: 'https://source-academy.github.io/py-slang/Py2JsEvaluator2.js',
   capabilities: [],
   welcome: 'You have chosen the **Py2JS** evaluator, which compiles Python §2 directly to JavaScript and runs it on the browser\'s own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).'
