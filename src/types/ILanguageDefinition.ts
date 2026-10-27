@@ -20,15 +20,17 @@ interface ILanguageDefinition {
         readonly url: string;
         /** Display name for the textbook (e.g. "SICPy", "SICP JS"). */
         readonly name: string;
+        /** Path of the textbook in the frontend, without a trailing slash (e.g. "/sicpy", "/sicpjs"). */
+        readonly route: string;
         /** URL of the textbook's title/cover image. */
         readonly titleImageUrl?: string;
     };
 
     /** Documentation shown in the frontend's Documentation tab for this language. */
     readonly documentation?: {
-        /** URL of the language's documentation. The frontend falls back to its generic documentation page when omitted. */
-        readonly languageUrl?: string;
-        /** URL of the modules documentation for this language. The frontend falls back to its default modules documentation when omitted. */
+        /** URL of the language's documentation. */
+        readonly languageUrl: string;
+        /** URL of the modules documentation for this language. The frontend shows no modules page when omitted. */
         readonly modulesUrl?: string;
     };
 

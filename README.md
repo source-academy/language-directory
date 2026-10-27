@@ -32,9 +32,14 @@ Language definitions should follow the `ILanguageDefinition` interface.
 Languages consist of an ID, a name, an array of evaluators capable of running the given language,
 and optional settings such as an editor configuration, a textbook, and documentation links.
 
+The optional `textbook` field makes the frontend offer a textbook button for the language: `name` is
+the label, `route` the textbook's path in the frontend (e.g. `/sicpy`), `url` the base URL of its
+content, and `titleImageUrl` its cover image. A language without a `textbook` has no textbook button.
+
 The optional `documentation` field sets the pages shown in the frontend's Documentation tab:
 `languageUrl` for the language's own documentation, and `modulesUrl` for its modules documentation.
-The frontend falls back to its default pages for any URL left out.
+A language without `documentation` has no Documentation tab, and one without `modulesUrl` has no
+modules page.
 
 To add a new language to the languages directory, define your language according to the interface,
 and add the definition to the `languages` array in `src/languages.ts`.

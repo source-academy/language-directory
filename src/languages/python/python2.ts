@@ -18,7 +18,7 @@ const python2Stepper: IEvaluatorDefinition = {
 export const python2Language: ILanguageDefinition = {
     id: "python2",
     name: "Python §2",
-    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
+    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_2/" },
     evaluators: [
         python2Py2js,

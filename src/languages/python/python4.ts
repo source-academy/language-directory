@@ -18,7 +18,7 @@ const python4EStepper: IEvaluatorDefinition = {
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
-    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
+    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4/" },
     evaluators: [
         python4Py2js,
