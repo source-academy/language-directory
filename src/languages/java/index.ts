@@ -11,6 +11,7 @@ const javaDefault: IEvaluatorDefinition = {
 export const javaLanguage: ILanguageDefinition = {
     id: "java",
     name: "Java",
+    family: "Java",
     evaluators: [
         javaDefault
     ],

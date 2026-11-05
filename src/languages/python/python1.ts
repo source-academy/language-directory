@@ -18,6 +18,7 @@ const python1Stepper: IEvaluatorDefinition = {
 export const python1Language: ILanguageDefinition = {
     id: "python1",
     name: "Python §1",
+    family: "Python",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_1/" },
     evaluators: [

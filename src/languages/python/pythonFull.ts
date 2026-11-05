@@ -11,6 +11,7 @@ const pythonFullPyodide: IEvaluatorDefinition = {
 export const pythonFullLanguage: ILanguageDefinition = {
     id: "pythonFull",
     name: "Python",
+    family: "Python",
     evaluators: [
         pythonFullPyodide
     ],
