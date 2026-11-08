@@ -18,6 +18,7 @@ const python4TypedEStepper: IEvaluatorDefinition = {
 export const python4TypedLanguage: ILanguageDefinition = {
     id: "python4Typed",
     name: "Typed Python §4",
+    family: "Python",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     // The library of Typed Python §4 is that of Python §4: its documentation is the one to read.
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4/" },
