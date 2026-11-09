@@ -5,7 +5,7 @@ const python4TypedPy2js: IEvaluatorDefinition = {
     name: "py2js",
     path: "https://source-academy.github.io/py-slang/TypedPy2JsEvaluator4.js",
     capabilities: [],
-    welcome: `You have chosen the **Py2JS** evaluator for Python §4 Typed. It checks the types of your program, and then compiles it directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nA program with type errors is not run: every error is shown, with its line. You can import the [Source Academy modules](https://source-academy.github.io/modules/documentation/) `rune`, `curve`, `sound` and `binary_tree`: their types are checked too. Other modules cannot be imported in Python §4 Typed yet.`
+    welcome: `You have chosen the **Py2JS** evaluator for Python §4 Typed. It checks the types of your program, and then compiles it directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nA program with type errors is not run: every error is shown, with its line. You can import the [Source Academy modules](https://source-academy.github.io/modules/documentation/) \`rune\`, \`curve\`, \`sound\` and \`binary_tree\`: their types are checked too. Other modules cannot be imported in Python §4 Typed yet.`
 };
 
 const python4TypedEStepper: IEvaluatorDefinition = {
