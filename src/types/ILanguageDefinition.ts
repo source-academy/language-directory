@@ -1,26 +1,6 @@
 import type { languages } from 'monaco-editor';
 import type { IEvaluatorDefinition } from './IEvaluatorDefinition';
 
-export interface TextbookConfig {
-  /** Base URL for the language's textbook JSON files. Must include a trailing slash (e.g. "https://sicp.sourceacademy.org/json_py/"). */
-  readonly url: string;
-  /** Display name for the textbook (e.g. "SICPy", "SICP JS"). */
-  readonly name: string;
-  /** URL of the textbook's title/cover image. */
-  readonly titleImageUrl?: string;
-}
-
-/**
- * Documentation shown in the frontend's Documentation tab for a given language.
- */
-export interface DocumentationConfig {
-  /** URL of the language's documentation. The frontend falls back to its generic documentation page when omitted. */
-  readonly languageUrl?: string;
-
-  /** URL of the modules documentation for this language. The frontend falls back to its default modules documentation when omitted. */
-  readonly modulesUrl?: string;
-}
-
 export interface ILanguageDefinition {
   /** The language's identifier. */
   readonly id: string;
@@ -32,13 +12,19 @@ export interface ILanguageDefinition {
   readonly evaluators: IEvaluatorDefinition[];
 
   /** Editor configuration. WIP. */
-  readonly editorConfig?: any;
 
-  /** Documentation shown in the frontend's Documentation tab for this language. */
-  readonly documentation?: DocumentationConfig;
+  readonly editorConfig?: any;
 
   /** Textbook configuration for this language. */
   readonly textbook?: TextbookConfig;
+
+  /** Documentation shown in the frontend's Documentation tab for this language. */
+  readonly documentation?: {
+    /** URL of the language's documentation. */
+    readonly languageUrl: string;
+    /** URL of the modules documentation for this language. The frontend shows no modules page when omitted. */
+    readonly modulesUrl?: string;
+  };
 
   /** Welcome/introduction text shown in the playground when this language is selected. Supports markdown. */
   readonly welcome?: string;
@@ -58,3 +44,25 @@ export interface ILanguageDefinition {
    */
   readonly monarchGrammar: string | languages.IMonarchLanguage;
 }
+
+/**
+ * Documentation shown in the frontend's Documentation tab for a given language.
+ */
+export interface DocumentationConfig {
+  /** URL of the language's documentation. The frontend falls back to its generic documentation page when omitted. */
+  readonly languageUrl?: string;
+
+  /** URL of the modules documentation for this language. The frontend falls back to its default modules documentation when omitted. */
+  readonly modulesUrl?: string;
+}
+
+export interface TextbookConfig {
+  /** Base URL for the language's textbook JSON files. Must include a trailing slash (e.g. "https://sicp.sourceacademy.org/json_py/"). */
+  readonly url: string;
+  /** Display name for the textbook (e.g. "SICPy", "SICP JS"). */
+  readonly name: string;
+  /** Path of the textbook in the frontend, without a trailing slash (e.g. "/sicpy", "/sicpjs"). */
+  readonly route: string;
+  /** URL of the textbook's title/cover image. */
+  readonly titleImageUrl?: string;
+};

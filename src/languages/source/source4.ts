@@ -20,13 +20,13 @@ const source4Cse: IEvaluatorDefinition = {
 export const source4Language: ILanguageDefinition = {
   id: 'source4',
   name: 'JavaScript §4',
-  textbook: { url: 'https://sicp.sourceacademy.org/json/', name: 'SICP JS', titleImageUrl: 'https://source-academy.github.io/sicp/sicpjs.png' },
+  monarchGrammar: sourceExtendedMonarch,
+  textbook: { url: 'https://sicp.sourceacademy.org/json/', name: 'SICP JS', route: '/sicpjs', titleImageUrl: 'https://source-academy.github.io/sicp/sicpjs.png' },
   documentation: { languageUrl: 'https://docs.sourceacademy.org/javascript/javascript_4/' },
   evaluators: [
     source4Default,
     source4Cse
   ],
-  monarchGrammar: sourceExtendedMonarch,
   defaultProgram: '// Type your program in here!\n\n',
   welcome: `Welcome to the Source Academy playground!
 
