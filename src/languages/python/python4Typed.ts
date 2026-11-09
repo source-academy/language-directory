@@ -19,8 +19,9 @@ export const python4TypedLanguage: ILanguageDefinition = {
     id: "python4Typed",
     name: "Python §4 Typed",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
-    // The library of Python §4 Typed is that of Python §4: its documentation is the one to read.
-    documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4/" },
+    // The page of Python §4 Typed: the types, the annotations, the modules, and the types of the library
+    // (which is that of Python §4).
+    documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4_typed/" },
     evaluators: [
         python4TypedPy2js,
         python4TypedEStepper,
