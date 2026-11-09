@@ -32,6 +32,9 @@ Language definitions should follow the `ILanguageDefinition` interface.
 Languages consist of an ID, a name, an array of evaluators capable of running the given language,
 and optional settings such as an editor configuration, a textbook, and documentation links.
 
+The optional `family` field groups languages in the frontend: its language selector lists each family
+once (e.g. "Python"), and a second selector chooses between the languages in that family (e.g. Python §1-§4).
+
 The optional `textbook` field makes the frontend offer a textbook button for the language: `name` is
 the label, `route` the textbook's path in the frontend (e.g. `/sicpy`), `url` the base URL of its
 content, and `titleImageUrl` its cover image. A language without a `textbook` has no textbook button.
