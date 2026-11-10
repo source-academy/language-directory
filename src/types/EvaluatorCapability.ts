@@ -14,6 +14,13 @@ enum EvaluatorCapability {
      * connected in the remote execution tab, in place of a hardcoded local evaluator path.
      */
     EV3 = "ev3",
+    /**
+     * Marks an evaluator as the environment stepper ("e-stepper") for its language: the stepper's
+     * step-by-step rewriting of the program, with the environment frames and heap it refers to.
+     * Like STEPPER, such an evaluator is hidden from the evaluator dropdown and selected when the
+     * user opens its side-content tab (E-Stepper), deselected when they leave it.
+     */
+    E_STEPPER = "e-stepper",
 }
 
 export { EvaluatorCapability };
