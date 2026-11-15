@@ -7,6 +7,9 @@ interface ILanguageDefinition {
     /** The name of the language. */
     readonly name: string;
 
+    /** The family the language belongs to (e.g. "Python" for Python §1-§4), shown in the frontend's language selector. Languages sharing a family are grouped, with the language `name` telling them apart. */
+    readonly family?: string;
+
     /** An array of evaluators that can run the language. */
     readonly evaluators: IEvaluatorDefinition[];
 
