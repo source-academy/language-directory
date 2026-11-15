@@ -19,6 +19,7 @@ export const javaLanguage: ILanguageDefinition = {
     foldersEnabled: false,
     defaultFileExtension: "java",
     defaultProgram: `// Type your program in here!
+// The class containing the "main" method must always be named Main.
 
 public class Main {
     public static void main(String[] args) {
@@ -26,4 +27,7 @@ public class Main {
     }
 }
 `,
+    welcome: `Welcome to the Source Academy playground!
+
+A subset of the [Java 8 language](https://docs.oracle.com/javase/specs/jls/se8/html/index.html) is used here, allowing for single-file programs with multiple features, which are specified in the [README](https://github.com/source-academy/java-slang).`
 };
