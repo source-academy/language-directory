@@ -30,6 +30,38 @@ const python3Pynter: IEvaluatorDefinition = {
     welcome: `You have chosen the **Pynter** evaluator (experimental), which compiles Python §3 to PVML bytecode and runs it on Pynter, Source Academy's bytecode virtual machine written in C, compiled to WebAssembly.\n\nThis evaluator does not yet support the pair, list, stream and visualizer libraries, nor Source Academy modules.`
 };
 
+const python3Pvml: IEvaluatorDefinition = {
+    id: "python3Pvml",
+    name: "PVML",
+    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator3.js",
+    capabilities: [],
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §3 to PVML bytecode and runs it on a virtual machine written in TypeScript.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python3Wasm: IEvaluatorDefinition = {
+    id: "python3Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator3.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §3 directly to a WebAssembly module and runs it in the browser. **Experimental**: calls of module functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.\n\nIn Chrome, this evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python3CPython: IEvaluatorDefinition = {
+    id: "python3CPython",
+    name: "CPython",
+    path: "https://source-academy.github.io/py-slang/PyodideEvaluator3.js",
+    capabilities: [],
+    welcome: `You have chosen the **CPython** evaluator, which runs Python §3 on CPython, Python's reference implementation, compiled to WebAssembly ([Pyodide](https://pyodide.org/)). **Experimental**: calls of [Source Academy module](https://source-academy.github.io/modules/documentation/) functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.`
+};
+
+const python3Cse: IEvaluatorDefinition = {
+    id: "python3Cse",
+    name: "CSE machine",
+    path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
+    capabilities: [EvaluatorCapability.CSE],
+    welcome: `You have chosen the **CSE machine** evaluator for Python §3, which runs your program step by step so the Control, Stash and Environment can be visualised.`
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
@@ -37,7 +69,11 @@ export const python3Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_3/" },
     evaluators: [
         python3Py2js,
+        python3Pvml,
+        python3Wasm,
+        python3CPython,
         python3Pynter,
+        python3Cse,
         python3EStepper,
         python3Ev3,
     ],

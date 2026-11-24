@@ -15,6 +15,30 @@ const python2Stepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.STEPPER]
 };
 
+const python2Pvml: IEvaluatorDefinition = {
+    id: "python2Pvml",
+    name: "PVML",
+    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator2.js",
+    capabilities: [],
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §2 to PVML bytecode and runs it on a virtual machine written in TypeScript.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python2Wasm: IEvaluatorDefinition = {
+    id: "python2Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator2.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §2 directly to a WebAssembly module and runs it in the browser. **Experimental**: calls of module functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.\n\nIn Chrome, this evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python2CPython: IEvaluatorDefinition = {
+    id: "python2CPython",
+    name: "CPython",
+    path: "https://source-academy.github.io/py-slang/PyodideEvaluator2.js",
+    capabilities: [],
+    welcome: `You have chosen the **CPython** evaluator, which runs Python §2 on CPython, Python's reference implementation, compiled to WebAssembly ([Pyodide](https://pyodide.org/)). **Experimental**: calls of [Source Academy module](https://source-academy.github.io/modules/documentation/) functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.`
+};
+
 export const python2Language: ILanguageDefinition = {
     id: "python2",
     name: "Python §2",
@@ -22,6 +46,9 @@ export const python2Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_2/" },
     evaluators: [
         python2Py2js,
+        python2Pvml,
+        python2Wasm,
+        python2CPython,
         python2Stepper,
     ],
     defaultFileExtension: "py",

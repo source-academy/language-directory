@@ -15,6 +15,30 @@ const python1Stepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.STEPPER]
 };
 
+const python1Pvml: IEvaluatorDefinition = {
+    id: "python1Pvml",
+    name: "PVML",
+    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator1.js",
+    capabilities: [],
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §1 to PVML bytecode and runs it on a virtual machine written in TypeScript.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python1Wasm: IEvaluatorDefinition = {
+    id: "python1Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator1.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §1 directly to a WebAssembly module and runs it in the browser. **Experimental**: calls of module functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.\n\nIn Chrome, this evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python1CPython: IEvaluatorDefinition = {
+    id: "python1CPython",
+    name: "CPython",
+    path: "https://source-academy.github.io/py-slang/PyodideEvaluator1.js",
+    capabilities: [],
+    welcome: `You have chosen the **CPython** evaluator, which runs Python §1 on CPython, Python's reference implementation, compiled to WebAssembly ([Pyodide](https://pyodide.org/)). **Experimental**: calls of [Source Academy module](https://source-academy.github.io/modules/documentation/) functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.`
+};
+
 export const python1Language: ILanguageDefinition = {
     id: "python1",
     name: "Python §1",
@@ -22,6 +46,9 @@ export const python1Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_1/" },
     evaluators: [
         python1Py2js,
+        python1Pvml,
+        python1Wasm,
+        python1CPython,
         python1Stepper,
     ],
     // §1 has no pair/list library, which local-file imports need to build
