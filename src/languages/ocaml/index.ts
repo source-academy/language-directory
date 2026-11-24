@@ -12,8 +12,6 @@ export const ocamlLanguage: ILanguageDefinition = {
     id: "ocaml",
     name: "OCaml",
     evaluators: [ocamlDefault],
-    // Ace has an OCaml mode; the frontend must include it.
-    editorConfig: { aceMode: "ocaml" },
     defaultFileExtension: "ml",
     defaultProgram: `(* Type your program in here! *)
 
