@@ -1,17 +1,17 @@
 import { IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const ocamlDefault: IEvaluatorDefinition = {
-    id: "ocamlDefault",
-    name: "Default",
+const ocamlJsOfOCaml: IEvaluatorDefinition = {
+    id: "ocamlJsOfOCaml",
+    name: "js_of_ocaml",
     path: "https://source-academy.github.io/ocaml-slang/OCamlEvaluator.js",
     capabilities: [],
-    welcome: `You have chosen the **Default** evaluator for OCaml, which runs your program with the real OCaml toplevel (OCaml 5.5.2), compiled to JavaScript with [js_of_ocaml](https://ocsigen.org/js_of_ocaml/), entirely in your browser. See [ocaml-slang](https://github.com/source-academy/ocaml-slang).\n\nRunning a program shows what it prints and the value of its last expression. In the REPL you type phrases as in the \`ocaml\` toplevel.`
+    welcome: `You have chosen the **js_of_ocaml** evaluator for OCaml, which runs your program with the real OCaml toplevel (OCaml 5.5.2), compiled to JavaScript with [js_of_ocaml](https://ocsigen.org/js_of_ocaml/), entirely in your browser. See [ocaml-slang](https://github.com/source-academy/ocaml-slang).\n\nRunning a program shows what it prints and the value of its last expression. In the REPL you type phrases as in the \`ocaml\` toplevel.`
 };
 
 export const ocamlLanguage: ILanguageDefinition = {
     id: "ocaml",
     name: "OCaml",
-    evaluators: [ocamlDefault],
+    evaluators: [ocamlJsOfOCaml],
     documentation: { languageUrl: "https://docs.sourceacademy.org/ocaml/" },
     defaultFileExtension: "ml",
     defaultProgram: `(* Type your program in here! *)
