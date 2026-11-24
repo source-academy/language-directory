@@ -12,6 +12,7 @@ export const ocamlLanguage: ILanguageDefinition = {
     id: "ocaml",
     name: "OCaml",
     evaluators: [ocamlDefault],
+    documentation: { languageUrl: "https://docs.sourceacademy.org/ocaml/" },
     defaultFileExtension: "ml",
     defaultProgram: `(* Type your program in here! *)
 
