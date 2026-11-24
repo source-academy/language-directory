@@ -15,6 +15,38 @@ const python4EStepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.E_STEPPER],
 };
 
+const python4Pvml: IEvaluatorDefinition = {
+    id: "python4Pvml",
+    name: "PVML",
+    path: "https://source-academy.github.io/py-slang/PyPvmlEvaluator4.js",
+    capabilities: [],
+    welcome: `You have chosen the **PVML** evaluator, which compiles Python §4 to PVML bytecode and runs it on a virtual machine written in TypeScript.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python4Wasm: IEvaluatorDefinition = {
+    id: "python4Wasm",
+    name: "WASM",
+    path: "https://source-academy.github.io/py-slang/PyWasmEvaluator4.js",
+    capabilities: [],
+    welcome: `You have chosen the **WASM** evaluator, which compiles Python §4 directly to a WebAssembly module and runs it in the browser. **Experimental**: calls of module functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.\n\nIn Chrome, this evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
+};
+
+const python4CPython: IEvaluatorDefinition = {
+    id: "python4CPython",
+    name: "CPython",
+    path: "https://source-academy.github.io/py-slang/PyodideEvaluator4.js",
+    capabilities: [],
+    welcome: `You have chosen the **CPython** evaluator, which runs Python §4 on CPython, Python's reference implementation, compiled to WebAssembly ([Pyodide](https://pyodide.org/)). **Experimental**: calls of [Source Academy module](https://source-academy.github.io/modules/documentation/) functions rely on WebAssembly's JavaScript Promise Integration (JSPI), which only Chrome-based browsers support so far.`
+};
+
+const python4Cse: IEvaluatorDefinition = {
+    id: "python4Cse",
+    name: "CSE machine",
+    path: "https://source-academy.github.io/py-slang/PyCseEvaluator4.js",
+    capabilities: [EvaluatorCapability.CSE],
+    welcome: `You have chosen the **CSE machine** evaluator for Python §4, which runs your program step by step so the Control, Stash and Environment can be visualised.`
+};
+
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
@@ -22,6 +54,10 @@ export const python4Language: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4/" },
     evaluators: [
         python4Py2js,
+        python4Pvml,
+        python4Wasm,
+        python4CPython,
+        python4Cse,
         python4EStepper,
     ],
     defaultFileExtension: "py",

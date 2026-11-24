@@ -15,6 +15,14 @@ const python4TypedEStepper: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.E_STEPPER],
 };
 
+const python4TypedCse: IEvaluatorDefinition = {
+    id: "python4TypedCse",
+    name: "CSE machine",
+    path: "https://source-academy.github.io/py-slang/TypedPyCseEvaluator4.js",
+    capabilities: [EvaluatorCapability.CSE],
+    welcome: `You have chosen the **CSE machine** evaluator for Python §4 Typed, which runs your program step by step so the Control, Stash and Environment can be visualised.`
+};
+
 export const python4TypedLanguage: ILanguageDefinition = {
     id: "python4Typed",
     name: "Python §4 Typed",
@@ -24,6 +32,7 @@ export const python4TypedLanguage: ILanguageDefinition = {
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4_typed/" },
     evaluators: [
         python4TypedPy2js,
+        python4TypedCse,
         python4TypedEStepper,
     ],
     defaultFileExtension: "py",
