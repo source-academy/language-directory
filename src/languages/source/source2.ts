@@ -20,6 +20,7 @@ export const source2Language: ILanguageDefinition = {
     name: "JavaScript §2",
     textbook: { url: "https://sicp.sourceacademy.org/json/", name: "SICP JS", route: "/sicpjs", titleImageUrl: "https://source-academy.github.io/sicp/sicpjs.png" },
     documentation: { languageUrl: "https://docs.sourceacademy.org/javascript/javascript_2/" },
+    editorConfig: { aceMode: "javascript" },
     evaluators: [
         source2Default,
         source2Stepper

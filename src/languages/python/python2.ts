@@ -44,6 +44,7 @@ export const python2Language: ILanguageDefinition = {
     name: "Python §2",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_2/" },
+    editorConfig: { aceMode: "python" },
     evaluators: [
         python2Py2js,
         python2Pvml,

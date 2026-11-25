@@ -1,5 +1,17 @@
 import { IEvaluatorDefinition } from "./IEvaluatorDefinition";
 
+interface IEditorConfig {
+    /**
+     * The id of an [Ace](https://ace.c9.io) mode (e.g. `"python"`, `"javascript"`) that the editor
+     * highlights the language with until the selected evaluator has loaded and sent its own mode
+     * (and for an evaluator that sends none, for good). The frontend loads Ace's modes on demand by
+     * id, so any of Ace's stock modes can be named. Without it, the editor shows plain text until
+     * the evaluator's mode arrives.
+     */
+    readonly aceMode?: string;
+    readonly [key: string]: unknown;
+}
+
 interface ILanguageDefinition {
     /** The language's identifier. */
     readonly id: string;
@@ -11,8 +23,7 @@ interface ILanguageDefinition {
     readonly evaluators: IEvaluatorDefinition[];
 
     /** Editor configuration. WIP. */
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    readonly editorConfig?: any;
+    readonly editorConfig?: IEditorConfig;
 
     /** Textbook configuration for this language. */
     readonly textbook?: {
@@ -47,4 +58,4 @@ interface ILanguageDefinition {
     readonly defaultProgram?: string;
 }
 
-export type { ILanguageDefinition };
+export type { IEditorConfig, ILanguageDefinition };
