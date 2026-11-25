@@ -20,6 +20,7 @@ const python3EStepper: IEvaluatorDefinition = {
     name: "Python §3",
     path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator3.js",
     capabilities: [EvaluatorCapability.E_STEPPER],
+    plugin: "e-stepper",
 };
 
 const python3Pynter: IEvaluatorDefinition = {

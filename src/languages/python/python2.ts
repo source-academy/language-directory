@@ -12,7 +12,8 @@ const python2Stepper: IEvaluatorDefinition = {
     id: "python2Stepper",
     name: "Python §2",
     path: "https://source-academy.github.io/py-slang/PyStepperEvaluator2.js",
-    capabilities: [EvaluatorCapability.STEPPER]
+    capabilities: [EvaluatorCapability.STEPPER],
+    plugin: "stepper",
 };
 
 const python2Pvml: IEvaluatorDefinition = {

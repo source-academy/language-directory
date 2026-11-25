@@ -12,7 +12,8 @@ const source1Stepper: IEvaluatorDefinition = {
     id: "source1Stepper",
     name: "Stepper",
     path: "https://source-academy.github.io/js-slang/SourceStepperEvaluator1.js",
-    capabilities: [EvaluatorCapability.STEPPER]
+    capabilities: [EvaluatorCapability.STEPPER],
+    plugin: "stepper",
 };
 
 export const source1Language: ILanguageDefinition = {
