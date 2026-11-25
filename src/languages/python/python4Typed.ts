@@ -13,6 +13,7 @@ const python4TypedEStepper: IEvaluatorDefinition = {
     name: "Python §4 Typed",
     path: "https://source-academy.github.io/py-slang/TypedPyEStepperEvaluator4.js",
     capabilities: [EvaluatorCapability.E_STEPPER],
+    plugin: "e-stepper",
 };
 
 const python4TypedCse: IEvaluatorDefinition = {

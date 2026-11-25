@@ -48,7 +48,7 @@ and add the definition to the `languages` array in `src/languages.ts`.
 
 Evaluator definitions should follow the `IEvaluatorDefinition` interface.
 
-Evaluators consist of an ID, a name, a URL to the evaluator's entrypoint file, and an array of its capabilities.
+Evaluators consist of an ID, a name, a URL to the evaluator's entrypoint file, an array of its capabilities, and optionally the plugin (an id in the plugin directory) whose side-content tab presents what it computes, as the Stepper's does. A host hides such an evaluator from the evaluator dropdown and selects it when the user opens the plugin's tab.
 
 ## Local testing
 

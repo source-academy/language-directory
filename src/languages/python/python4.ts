@@ -13,6 +13,7 @@ const python4EStepper: IEvaluatorDefinition = {
     name: "Python §4",
     path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator4.js",
     capabilities: [EvaluatorCapability.E_STEPPER],
+    plugin: "e-stepper",
 };
 
 const python4Pvml: IEvaluatorDefinition = {
