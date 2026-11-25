@@ -30,6 +30,7 @@ export const python4TypedLanguage: ILanguageDefinition = {
     // The page of Python §4 Typed: the types, the annotations, the modules, and the types of the library
     // (which is that of Python §4).
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4_typed/" },
+    editorConfig: { aceMode: "python" },
     evaluators: [
         python4TypedPy2js,
         python4TypedCse,

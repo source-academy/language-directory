@@ -10,6 +10,7 @@ const schemeEvaluator: IEvaluatorDefinition = {
 export const schemeLanguage: ILanguageDefinition = {
     id: "scheme",
     name: "Scheme",
+    editorConfig: { aceMode: "scheme" },
     evaluators: [schemeEvaluator],
     defaultFileExtension: "scm",
     defaultProgram: ";; Type your program in here!\n\n",

@@ -11,6 +11,7 @@ const ocamlJsOfOCaml: IEvaluatorDefinition = {
 export const ocamlLanguage: ILanguageDefinition = {
     id: "ocaml",
     name: "OCaml",
+    editorConfig: { aceMode: "ocaml" },
     evaluators: [ocamlJsOfOCaml],
     documentation: { languageUrl: "https://docs.sourceacademy.org/ocaml/" },
     defaultFileExtension: "ml",
