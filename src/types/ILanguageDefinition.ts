@@ -35,6 +35,14 @@ interface ILanguageDefinition {
         readonly route: string;
         /** URL of the textbook's title/cover image. */
         readonly titleImageUrl?: string;
+        /**
+         * The chapters of the textbook (as the textbook numbers them, e.g. `"3"` for chapter 3) that are
+         * written in this language: a snippet in one of them runs in this language. At most one language
+         * of a textbook (the same `route`) names a given chapter, and a language that is not the
+         * language of any chapter (for example an extension of one) leaves this out. Look up the
+         * language of a chapter with `getLanguageOfTextbookChapter`.
+         */
+        readonly chapters?: readonly string[];
     };
 
     /** Documentation shown in the frontend's Documentation tab for this language. */

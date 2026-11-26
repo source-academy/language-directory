@@ -36,6 +36,13 @@ The optional `textbook` field makes the frontend offer a textbook button for the
 the label, `route` the textbook's path in the frontend (e.g. `/sicpy`), `url` the base URL of its
 content, and `titleImageUrl` its cover image. A language without a `textbook` has no textbook button.
 
+`textbook.chapters` lists the chapters of the book (as it numbers them) that are written in this
+language, so that a snippet in a chapter runs in the right language: `source3` has `["3"]` of
+`/sicpjs`, `python2` has `["2"]` of `/sicpy`. At most one language of a book names a chapter, and a
+language that is not the language of a chapter (such as Python §4 Typed, an extension of §4) leaves
+the field out. `getLanguageOfTextbookChapter(languages, route, chapter)` finds the language of a
+chapter.
+
 The optional `documentation` field sets the pages shown in the frontend's Documentation tab:
 `languageUrl` for the language's own documentation, and `modulesUrl` for its modules documentation.
 A language without `documentation` has no Documentation tab, and one without `modulesUrl` has no

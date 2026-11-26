@@ -23,3 +23,20 @@ export function getLanguageDefinition(languageMap: Map<string, ILanguageDefiniti
 export function getEvaluatorDefinition(language: ILanguageDefinition, evaluatorId: string) {
     return language.evaluators.find(evalDef => evalDef.id === evaluatorId);
 }
+
+/**
+ * Retrieve the language that a chapter of a textbook is written in.
+ * @param languages The languages of the directory.
+ * @param textbookRoute The `route` of the textbook (e.g. "/sicpjs").
+ * @param chapter The chapter of the textbook, as the textbook numbers it (e.g. "3").
+ * @returns The language, or undefined if no language says that it is the language of that chapter.
+ */
+export function getLanguageOfTextbookChapter(
+    languages: readonly ILanguageDefinition[],
+    textbookRoute: string,
+    chapter: string,
+) {
+    return languages.find(
+        language => language.textbook?.route === textbookRoute && language.textbook.chapters?.includes(chapter),
+    );
+}

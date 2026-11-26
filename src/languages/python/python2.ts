@@ -43,7 +43,7 @@ const python2CPython: IEvaluatorDefinition = {
 export const python2Language: ILanguageDefinition = {
     id: "python2",
     name: "Python §2",
-    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
+    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png", chapters: ["2"] },
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_2/" },
     editorConfig: { aceMode: "python" },
     evaluators: [
