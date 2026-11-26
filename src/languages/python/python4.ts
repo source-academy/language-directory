@@ -51,7 +51,7 @@ const python4Cse: IEvaluatorDefinition = {
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
-    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png", chapters: ["4"] },
+    textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", route: "/sicpy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png", chapters: ["4", "5"] },
     documentation: { languageUrl: "https://docs.sourceacademy.org/python/python_4/" },
     editorConfig: { aceMode: "python" },
     evaluators: [
