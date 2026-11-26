@@ -39,8 +39,10 @@ interface ILanguageDefinition {
          * The chapters of the textbook (as the textbook numbers them, e.g. `"3"` for chapter 3) that are
          * written in this language: a snippet in one of them runs in this language. At most one language
          * of a textbook (the same `route`) names a given chapter, and a language that is not the
-         * language of any chapter (for example an extension of one) leaves this out. Look up the
-         * language of a chapter with `getLanguageOfTextbookChapter`.
+         * language of any chapter (for example an extension of one) leaves this out. A chapter that
+         * brings no language features of its own is listed with the language it uses (chapter 5 of the
+         * SICP textbooks, with chapter 4's). Look up the language of a chapter with
+         * `getLanguageOfTextbookChapter`.
          */
         readonly chapters?: readonly string[];
     };
