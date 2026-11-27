@@ -13,6 +13,7 @@ const source3Cse: IEvaluatorDefinition = {
     name: "CSE machine",
     path: "https://source-academy.github.io/js-slang/SourceCseEvaluator3.js",
     capabilities: [EvaluatorCapability.CSE],
+    plugin: "cse-machine",
     welcome: `You have chosen the **CSE machine** evaluator for JavaScript §3, which runs your program step by step so the Control, Stash and Environment can be visualised.`
 };
 
