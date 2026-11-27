@@ -21,6 +21,7 @@ const python4TypedCse: IEvaluatorDefinition = {
     name: "CSE machine",
     path: "https://source-academy.github.io/py-slang/TypedPyCseEvaluator4.js",
     capabilities: [EvaluatorCapability.CSE],
+    plugin: "cse-machine",
     welcome: `You have chosen the **CSE machine** evaluator for Python §4 Typed, which runs your program step by step so the Control, Stash and Environment can be visualised.`
 };
 
